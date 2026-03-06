@@ -1,0 +1,17 @@
+# Robots.txt for MaudelClaw
+# https://maudelclaw.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://maudelclaw.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Block common bot paths that aren't useful
+Disallow: /node_modules/
+Disallow: /src/
+Disallow: /*.tsx$
+Disallow: /*.ts$
