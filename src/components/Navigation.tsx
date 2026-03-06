@@ -1,17 +1,20 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
-import { Menu, X, Globe, Github } from 'lucide-react'
-import { TranslationKeys } from '../i18n/translations'
+import { Menu, X, Globe, Github, Check, ChevronDown } from 'lucide-react'
+import { TranslationKeys, Language } from '../i18n/translations'
+import { supportedLanguages } from '../hooks/useLanguage'
 
 interface NavigationProps {
   t: TranslationKeys
-  language: 'en' | 'zh'
-  toggleLanguage: () => void
+  language: Language
+  changeLanguage: (lang: Language) => void
 }
 
-export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
+export function Navigation({ t, language, changeLanguage }: NavigationProps) {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const [isLangMenuOpen, setIsLangMenuOpen] = useState(false)
+  const langMenuRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,12 +24,25 @@ export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  // 点击外部关闭语言菜单
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (langMenuRef.current && !langMenuRef.current.contains(event.target as Node)) {
+        setIsLangMenuOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
+
   const navItems = [
     { key: 'home', href: '#home' },
     { key: 'features', href: '#features' },
     { key: 'architecture', href: '#architecture' },
     { key: 'download', href: '#download' },
   ]
+
+  const currentLang = supportedLanguages.find(l => l.code === language)
 
   return (
     <motion.nav
@@ -73,16 +89,48 @@ export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <motion.button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg neon-border text-cyber-blue hover:bg-cyber-blue/10 transition-all"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Globe size={18} />
-              <span className="font-mono">{language === 'en' ? '中文' : 'EN'}</span>
-            </motion.button>
+            {/* Language Selector */}
+            <div className="relative" ref={langMenuRef}>
+              <motion.button
+                onClick={() => setIsLangMenuOpen(!isLangMenuOpen)}
+                className="flex items-center space-x-2 px-4 py-2 rounded-lg neon-border text-cyber-blue hover:bg-cyber-blue/10 transition-all"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                <Globe size={18} />
+                <span className="font-mono text-sm">{currentLang?.nativeName}</span>
+                <ChevronDown size={14} className={`transition-transform ${isLangMenuOpen ? 'rotate-180' : ''}`} />
+              </motion.button>
 
+              <AnimatePresence>
+                {isLangMenuOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    exit={{ opacity: 0, y: 10 }}
+                    className="absolute right-0 mt-2 w-48 rounded-lg glass border border-white/10 shadow-xl overflow-hidden"
+                  >
+                    {supportedLanguages.map((lang) => (
+                      <button
+                        key={lang.code}
+                        onClick={() => {
+                          changeLanguage(lang.code)
+                          setIsLangMenuOpen(false)
+                        }}
+                        className={`w-full flex items-center justify-between px-4 py-2.5 text-sm hover:bg-white/10 transition-colors ${
+                          language === lang.code ? 'text-cyber-blue' : 'text-gray-300'
+                        }`}
+                      >
+                        <span>{lang.nativeName}</span>
+                        {language === lang.code && <Check size={16} className="text-cyber-blue" />}
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            {/* GitHub Button */}
             <motion.a
               href="https://github.com/ModelSmart/MaudelClaw"
               target="_blank"
@@ -127,14 +175,28 @@ export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
                   {t.nav[item.key as keyof typeof t.nav]}
                 </a>
               ))}
-              <div className="pt-4 space-y-2">
-                <button
-                  onClick={toggleLanguage}
-                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg neon-border"
-                >
-                  <Globe size={18} />
-                  <span>{language === 'en' ? '切换到中文' : 'Switch to English'}</span>
-                </button>
+
+              {/* Mobile Language Selector */}
+              <div className="pt-4 border-t border-white/10">
+                <p className="text-xs text-gray-500 mb-2">Language / 语言</p>
+                <div className="grid grid-cols-2 gap-2">
+                  {supportedLanguages.slice(0, 6).map((lang) => (
+                    <button
+                      key={lang.code}
+                      onClick={() => changeLanguage(lang.code)}
+                      className={`px-3 py-2 rounded text-sm ${
+                        language === lang.code
+                          ? 'bg-cyber-blue/20 text-cyber-blue border border-cyber-blue/50'
+                          : 'bg-white/5 text-gray-300 border border-white/10'
+                      }`}
+                    >
+                      {lang.nativeName}
+                    </button>
+                  ))}
+                </div>
+              </div>
+
+              <div className="pt-2">
                 <a
                   href="https://github.com/ModelSmart/MaudelClaw"
                   target="_blank"
