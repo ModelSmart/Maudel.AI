@@ -91,8 +91,8 @@ export const translations = {
       threeComponent: {
         title: 'Three-Component Architecture',
         description: 'MaudelClaw consists of three main components working together seamlessly',
-        halo: 'Halo Desktop Client',
-        happy: 'Happy Mobile Client',
+        halo: 'MaudelClaw Desktop Client',
+        happy: 'Mobile Client',
         agentFlow: 'Agent Flow Backend',
       },
 
@@ -532,7 +532,7 @@ export const translations = {
     },
     architecture: {
       title: 'システムアーキテクチャ', subtitle: '信頼性とパフォーマンスのための最新技術スタック',
-      threeComponent: { title: '3コンポーネントアーキテクチャ', description: 'MaudelClawは3つの主要コンポーネントで構成', halo: 'Haloデスクトップクライアント', happy: 'Happyモバイルクライアント', agentFlow: 'Agent Flowバックエンド' },
+      threeComponent: { title: '3コンポーネントアーキテクチャ', description: 'MaudelClawは3つの主要コンポーネントで構成', halo: 'MaudelClaw デスクトップ', happy: 'モバイル', agentFlow: 'Agent Flow バックエンド' },
       techStack: { title: '技術スタック', frontend: 'フロントエンド', desktop: 'デスクトップフレームワーク', backend: 'バックエンドAPI', sdk: 'Agent SDK', database: 'データベース', protocol: 'プロトコル' },
       workflow: { title: '仕組み', step1: 'ユーザー入力', step1Desc: '自然言語でのタスク説明', step2: 'タスク理解', step2Desc: 'AIが要件を分析', step3: 'ツール呼び出し', step3Desc: '関連ツールを自動呼び出し', step4: '実行フィードバック', step4Desc: 'リアルタイム結果更新', step5: '反復と最適化', step5Desc: '目標達成まで戦略調整' },
     },
@@ -592,7 +592,7 @@ export const translations = {
     },
     architecture: {
       title: 'Architecture Système', subtitle: 'Construit avec des technologies modernes',
-      threeComponent: { title: 'Architecture Trois Composants', description: 'MaudelClaw comprend trois composants principaux', halo: 'Client Desktop Halo', happy: 'Client Mobile Happy', agentFlow: 'Backend Agent Flow' },
+      threeComponent: { title: 'Architecture Trois Composants', description: 'MaudelClaw comprend trois composants principaux', halo: 'Client Desktop MaudelClaw', happy: 'Client Mobile', agentFlow: 'Backend Agent Flow' },
       techStack: { title: 'Stack Technologique', frontend: 'Frontend', desktop: 'Framework Desktop', backend: 'API Backend', sdk: 'Agent SDK', database: 'Base de données', protocol: 'Protocole' },
       workflow: { title: 'Comment ça fonctionne', step1: 'Entrée Utilisateur', step1Desc: 'Description de tâche en langage naturel', step2: 'Compréhension de Tâche', step2Desc: 'L\'IA analyse les exigences', step3: 'Invocation d\'Outils', step3Desc: 'Appelle automatiquement les outils pertinents', step4: 'Feedback d\'Exécution', step4Desc: 'Mise à jour des résultats en temps réel', step5: 'Itération & Optimisation', step5Desc: 'Ajuste la stratégie jusqu\'à l\'objectif' },
     },
@@ -652,7 +652,7 @@ export const translations = {
     },
     architecture: {
       title: 'Systemarchitektur', subtitle: 'Mit modernen Technologien für Zuverlässigkeit',
-      threeComponent: { title: 'Drei-Komponenten-Architektur', description: 'MaudelClaw besteht aus drei Hauptkomponenten', halo: 'Halo Desktop-Client', happy: 'Happy Mobile-Client', agentFlow: 'Agent Flow Backend' },
+      threeComponent: { title: 'Drei-Komponenten-Architektur', description: 'MaudelClaw besteht aus drei Hauptkomponenten', halo: 'MaudelClaw Desktop-Client', happy: 'Mobile-Client', agentFlow: 'Agent Flow Backend' },
       techStack: { title: 'Technologie-Stack', frontend: 'Frontend', desktop: 'Desktop-Framework', backend: 'Backend-API', sdk: 'Agent SDK', database: 'Datenbank', protocol: 'Protokoll' },
       workflow: { title: 'Funktionsweise', step1: 'Benutzereingabe', step1Desc: 'Aufgabenbeschreibung in natürlicher Sprache', step2: 'Aufgabenverständnis', step2Desc: 'KI analysiert Anforderungen', step3: 'Werkzeugaufruf', step3Desc: 'Ruft automatisch relevante Werkzeuge auf', step4: 'Ausführungsfeedback', step4Desc: 'Echtzeit-Ergebnisupdates', step5: 'Iteration & Optimierung', step5Desc: 'Passt Strategie bis zum Ziel an' },
     },
@@ -712,7 +712,7 @@ export const translations = {
     },
     architecture: {
       title: 'Arquitectura del Sistema', subtitle: 'Construido con tecnologías modernas',
-      threeComponent: { title: 'Arquitectura de Tres Componentes', description: 'MaudelClaw consta de tres componentes principales', halo: 'Cliente Desktop Halo', happy: 'Cliente Móvil Happy', agentFlow: 'Backend Agent Flow' },
+      threeComponent: { title: 'Arquitectura de Tres Componentes', description: 'MaudelClaw consta de tres componentes principales', halo: 'Cliente Desktop MaudelClaw', happy: 'Cliente Móvil', agentFlow: 'Backend Agent Flow' },
       techStack: { title: 'Stack Tecnológico', frontend: 'Frontend', desktop: 'Framework Desktop', backend: 'API Backend', sdk: 'Agent SDK', database: 'Base de datos', protocol: 'Protocolo' },
       workflow: { title: 'Cómo Funciona', step1: 'Entrada del Usuario', step1Desc: 'Descripción de tarea en lenguaje natural', step2: 'Comprensión de Tarea', step2Desc: 'La IA analiza los requisitos', step3: 'Invocación de Herramientas', step3Desc: 'Llama automáticamente a herramientas relevantes', step4: 'Feedback de Ejecución', step4Desc: 'Actualizaciones de resultados en tiempo real', step5: 'Iteración y Optimización', step5Desc: 'Ajusta la estrategia hasta el objetivo' },
     },
@@ -772,7 +772,7 @@ export const translations = {
     },
     architecture: {
       title: 'Архитектура системы', subtitle: 'Построено на современных технологиях',
-      threeComponent: { title: 'Трёхкомпонентная архитектура', description: 'MaudelClaw состоит из трёх основных компонентов', halo: 'Клиент Halo', happy: 'Мобильный клиент Happy', agentFlow: 'Бэкенд Agent Flow' },
+      threeComponent: { title: 'Трёхкомпонентная архитектура', description: 'MaudelClaw состоит из трёх основных компонентов', halo: 'Клиент MaudelClaw', happy: 'Мобильный клиент', agentFlow: 'Бэкенд Agent Flow' },
       techStack: { title: 'Технологический стек', frontend: 'Фронтенд', desktop: 'Фреймворк', backend: 'API бэкенда', sdk: 'Agent SDK', database: 'База данных', protocol: 'Протокол' },
       workflow: { title: 'Как это работает', step1: 'Ввод пользователя', step1Desc: 'Описание задачи на естественном языке', step2: 'Понимание задачи', step2Desc: 'ИИ анализирует требования', step3: 'Вызов инструментов', step3Desc: 'Автоматический вызов релевантных инструментов', step4: 'Обратная связь', step4Desc: 'Обновление результатов в реальном времени', step5: 'Итерация и оптимизация', step5Desc: 'Корректировка стратегии до достижения цели' },
     },
@@ -832,7 +832,7 @@ export const translations = {
     },
     architecture: {
       title: 'Kiến trúc hệ thống', subtitle: 'Được xây dựng với công nghệ hiện đại',
-      threeComponent: { title: 'Kiến trúc ba thành phần', description: 'MaudelClaw bao gồm ba thành phần chính', halo: 'Client Desktop Halo', happy: 'Client Mobile Happy', agentFlow: 'Backend Agent Flow' },
+      threeComponent: { title: 'Kiến trúc ba thành phần', description: 'MaudelClaw bao gồm ba thành phần chính', halo: 'Client Desktop MaudelClaw', happy: 'Client Mobile', agentFlow: 'Backend Agent Flow' },
       techStack: { title: 'Stack công nghệ', frontend: 'Frontend', desktop: 'Framework Desktop', backend: 'API Backend', sdk: 'Agent SDK', database: 'Cơ sở dữ liệu', protocol: 'Giao thức' },
       workflow: { title: 'Cách hoạt động', step1: 'Đầu vào người dùng', step1Desc: 'Mô tả tác vụ bằng ngôn ngữ tự nhiên', step2: 'Hiểu tác vụ', step2Desc: 'AI phân tích yêu cầu', step3: 'Gọi công cụ', step3Desc: 'Tự động gọi công cụ liên quan', step4: 'Phản hồi thực thi', step4Desc: 'Cập nhật kết quả thời gian thực', step5: 'Lặp lại & Tối ưu hóa', step5Desc: 'Điều chỉnh chiến lược đến mục tiêu' },
     },
@@ -892,7 +892,7 @@ export const translations = {
     },
     architecture: {
       title: 'هيكل النظام', subtitle: 'مبني بتقنيات حديثة للموثوقية',
-      threeComponent: { title: 'هيكل ثلاثي المكونات', description: 'يتكون MaudelClaw من ثلاثة مكونات رئيسية', halo: 'عميل سطح المكتب Halo', happy: 'عميل الهاتف Happy', agentFlow: 'الواجهة الخلفية Agent Flow' },
+      threeComponent: { title: 'هيكل ثلاثي المكونات', description: 'يتكون MaudelClaw من ثلاثة مكونات رئيسية', halo: 'عميل سطح المكتب MaudelClaw', happy: 'عميل الهاتف', agentFlow: 'الواجهة الخلفية Agent Flow' },
       techStack: { title: 'المكدس التقني', frontend: 'الواجهة الأمامية', desktop: 'إطار سطح المكتب', backend: 'API الخلفية', sdk: 'Agent SDK', database: 'قاعدة البيانات', protocol: 'البروتوكول' },
       workflow: { title: 'كيف يعمل', step1: 'إدخال المستخدم', step1Desc: 'وصف المهمة باللغة الطبيعية', step2: 'فهم المهمة', step2Desc: 'الذكاء الاصطناعي يحلل المتطلبات', step3: 'استدعاء الأدوات', step3Desc: 'استدعاء تلقائي للأدوات ذات الصلة', step4: 'ملاحظات التنفيذ', step4Desc: 'تحديث النتائج في الوقت الفعلي', step5: 'التكرار والتحسين', step5Desc: 'ضبط الاستراتيجية حتى الهدف' },
     },
@@ -952,7 +952,7 @@ export const translations = {
     },
     architecture: {
       title: 'สถาปัตยกรรมระบบ', subtitle: 'สร้างด้วยเทคโนโลยีทันสมัย',
-      threeComponent: { title: 'สถาปัตยกรรมสามส่วน', description: 'MaudelClaw ประกอบด้วยสามส่วนหลัก', halo: 'ไคลเอนต์เดสก์ท็อป Halo', happy: 'ไคลเอนต์มือถือ Happy', agentFlow: 'แบ็กเอนด์ Agent Flow' },
+      threeComponent: { title: 'สถาปัตยกรรมสามส่วน', description: 'MaudelClaw ประกอบด้วยสามส่วนหลัก', halo: 'ไคลเอนต์เดสก์ท็อป MaudelClaw', happy: 'ไคลเอนต์มือถือ', agentFlow: 'แบ็กเอนด์ Agent Flow' },
       techStack: { title: 'เทคโนโลยีที่ใช้', frontend: 'Frontend', desktop: 'เฟรมเวิร์กเดสก์ท็อป', backend: 'API Backend', sdk: 'Agent SDK', database: 'ฐานข้อมูล', protocol: 'โปรโตคอล' },
       workflow: { title: 'วิธีการทำงาน', step1: 'อินพุตผู้ใช้', step1Desc: 'อธิบายงานเป็นภาษาธรรมชาติ', step2: 'การเข้าใจงาน', step2Desc: 'AI วิเคราะห์ความต้องการ', step3: 'เรียกใช้เครื่องมือ', step3Desc: 'เรียกเครื่องมือที่เกี่ยวข้องอัตโนมัติ', step4: 'ผลตอบรับการดำเนินการ', step4Desc: 'อัปเดตผลลัพธ์แบบเรียลไทม์', step5: 'ทำซ้ำและปรับปรุง', step5Desc: 'ปรับกลยุทธ์จนกว่าจะบรรลุเป้าหมาย' },
     },
