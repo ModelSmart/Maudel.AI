@@ -296,8 +296,8 @@ export const translations = {
       threeComponent: {
         title: '三组件架构',
         description: 'MaudelClaw 由三个主要组件无缝协作组成',
-        halo: 'Halo 桌面客户端',
-        happy: 'Happy 移动端',
+        halo: 'MaudelClaw 桌面客户端',
+        happy: '移动端',
         agentFlow: 'Agent Flow 后端',
       },
 
@@ -460,8 +460,8 @@ export const translations = {
       threeComponent: {
         title: '三組件架構',
         description: 'MaudelClaw 由三個主要組件無縫協作組成',
-        halo: 'Halo 桌面客戶端',
-        happy: 'Happy 移動端',
+        halo: 'MaudelClaw 桌面客戶端',
+        happy: '移動端',
         agentFlow: 'Agent Flow 後端',
       },
       techStack: { title: '技術棧', frontend: '前端', desktop: '桌面框架', backend: '後端 API', sdk: 'Agent SDK', database: '數據庫', protocol: '協議' },
