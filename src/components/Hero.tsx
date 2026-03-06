@@ -23,7 +23,7 @@ export function Hero({ t }: HeroProps) {
   }
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center justify-center tech-grid overflow-hidden">
+    <section id="home" className="relative min-h-screen flex items-center justify-center tech-grid overflow-hidden pt-20 md:pt-0">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 overflow-hidden">
         {/* Floating Orbs */}
