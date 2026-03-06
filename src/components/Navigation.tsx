@@ -84,7 +84,7 @@ export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
             </motion.button>
 
             <motion.a
-              href="https://github.com"
+              href="https://github.com/ModelSmart/MaudelClaw"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center space-x-2 px-4 py-2 rounded-lg neon-border text-white hover:bg-white/10 transition-all"

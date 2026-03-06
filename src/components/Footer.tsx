@@ -10,7 +10,7 @@ export function Footer({ t }: FooterProps) {
   const links = [
     { icon: BookOpen, label: t.footer.links.documentation, href: '#' },
     { icon: Users, label: t.footer.links.community, href: '#' },
-    { icon: Github, label: t.footer.links.github, href: 'https://github.com' },
+    { icon: Github, label: t.footer.links.github, href: 'https://github.com/ModelSmart/MaudelClaw' },
     { icon: Twitter, label: t.footer.links.twitter, href: 'https://twitter.com' },
   ]
 
