@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Download as DownloadIcon, Apple, Monitor, Globe, CheckCircle, ArrowRight } from 'lucide-react'
+import { Download as DownloadIcon, Apple, Monitor, CheckCircle, ArrowRight } from 'lucide-react'
 import { TranslationKeys } from '../i18n/translations'
 
 interface DownloadProps {
@@ -9,12 +9,23 @@ interface DownloadProps {
 export function Download({ t }: DownloadProps) {
   const platforms = [
     {
-      id: 'macos',
+      id: 'macos-arm',
       icon: Apple,
-      title: t.download.platform.macos.title,
-      version: t.download.platform.macos.version,
-      buttonText: t.download.platform.macos.download,
+      title: t.download.platform.macosArm.title,
+      version: t.download.platform.macosArm.version,
+      buttonText: t.download.platform.macosArm.download,
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_AppleSilicon.dmg',
       color: 'cyber-blue',
+      available: true,
+    },
+    {
+      id: 'macos-intel',
+      icon: Apple,
+      title: t.download.platform.macosIntel.title,
+      version: t.download.platform.macosIntel.version,
+      buttonText: t.download.platform.macosIntel.download,
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_x64.dmg',
+      color: 'cyber-purple',
       available: true,
     },
     {
@@ -23,15 +34,7 @@ export function Download({ t }: DownloadProps) {
       title: t.download.platform.windows.title,
       version: t.download.platform.windows.version,
       buttonText: t.download.platform.windows.download,
-      color: 'cyber-purple',
-      available: true,
-    },
-    {
-      id: 'web',
-      icon: Globe,
-      title: t.download.platform.web.title,
-      version: t.download.platform.web.version,
-      buttonText: t.download.platform.web.launch,
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_x64-setup.exe',
       color: 'cyber-pink',
       available: true,
     },
@@ -116,10 +119,11 @@ export function Download({ t }: DownloadProps) {
                   {platform.version}
                 </p>
 
-                <motion.button
+                <motion.a
+                  href={platform.downloadUrl}
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 cursor-pointer"
                   style={{
                     background: `linear-gradient(135deg, ${colorMap[platform.color]} 0%, ${colorMap[platform.color]}80 100%)`,
                     color: platform.color === 'cyber-green' ? '#000' : '#fff',
@@ -127,7 +131,7 @@ export function Download({ t }: DownloadProps) {
                 >
                   <DownloadIcon size={20} />
                   <span>{platform.buttonText}</span>
-                </motion.button>
+                </motion.a>
               </div>
             </motion.div>
           ))}

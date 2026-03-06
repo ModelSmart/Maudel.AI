@@ -69,6 +69,26 @@ export function Footer({ t }: FooterProps) {
         {/* Divider */}
         <div className="my-8 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
+        {/* SEO Keywords Section */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          className="mb-8"
+        >
+          <h4 className="text-xs font-medium text-gray-500 mb-3 text-center">{t.footer.seo.title}</h4>
+          <div className="flex flex-wrap justify-center gap-2 max-w-4xl mx-auto">
+            {t.footer.seo.keywords.split(', ').map((keyword, index) => (
+              <span
+                key={index}
+                className="text-xs text-gray-600 hover:text-gray-400 transition-colors px-2 py-1"
+              >
+                {keyword}
+              </span>
+            ))}
+          </div>
+        </motion.div>
+
         {/* Copyright */}
         <motion.div
           initial={{ opacity: 0 }}

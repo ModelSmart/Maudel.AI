@@ -7,19 +7,27 @@ export const translations = {
       architecture: 'Architecture',
       download: 'Download',
       docs: 'Docs',
+      github: 'GitHub',
     },
 
     // 首页
     hero: {
       title: 'MaudelClaw',
       subtitle: 'Cross-Platform AI Agent System',
-      description: 'Fully local deployment, privacy-first, powered by SOTA models and local AI models. Automate your workflows with intelligent agents.',
+      description: 'Ready to use out of the box, beautiful interface, powerful features. Fully compatible with OpenClaw ecosystem. Privacy-first, powered by SOTA models.',
       cta: {
         download: 'Download Now',
         learn: 'Learn More',
-        github: 'Coming Soon',
+        github: 'Star on GitHub',
       },
-      badge: 'Coming Soon • Open Source • Privacy First',
+      badge: 'Open Source • Privacy First • OpenClaw Compatible',
+      // 核心优势
+      highlights: {
+        readyToUse: 'Ready to Use',
+        beautifulUI: 'Beautiful Interface',
+        powerful: 'Powerful Features',
+        compatible: 'OpenClaw Compatible',
+      },
     },
 
     // 特性部分
@@ -112,20 +120,20 @@ export const translations = {
       subtitle: 'Choose your platform and get started in minutes',
 
       platform: {
-        macos: {
-          title: 'macOS',
-          version: 'Requires macOS 10.15 or later',
-          download: 'Download for macOS',
+        macosArm: {
+          title: 'macOS (Apple Silicon)',
+          version: 'For M1/M2/M3/M4 chips • Requires macOS 10.15 or later',
+          download: 'Download for Apple Silicon',
+        },
+        macosIntel: {
+          title: 'macOS (Intel)',
+          version: 'For Intel-based Macs • Requires macOS 10.15 or later',
+          download: 'Download for Intel Mac',
         },
         windows: {
           title: 'Windows',
           version: 'Requires Windows 10 or later',
           download: 'Download for Windows',
-        },
-        web: {
-          title: 'Web Version',
-          version: 'Use in browser, no installation required',
-          launch: 'Launch Web App',
         },
       },
 
@@ -155,6 +163,11 @@ export const translations = {
         twitter: 'Twitter',
       },
       copyright: '© 2026 MaudelClaw. All rights reserved.',
+      // SEO关键词
+      seo: {
+        title: 'Related Keywords',
+        keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, OpenClaw Install, AI Agent, LLM Desktop App, Claude Desktop, Privacy-First AI, Local AI Assistant, Open Source AI Agent',
+      },
     },
   },
 
@@ -166,19 +179,27 @@ export const translations = {
       architecture: '系统架构',
       download: '立即下载',
       docs: '文档',
+      github: 'GitHub',
     },
 
     // 首页
     hero: {
       title: 'MaudelClaw',
       subtitle: '跨平台 AI Agent 智能体系统',
-      description: '完全本地部署，隐私优先，支持 SOTA 模型和本地 AI 模型。使用智能代理自动化您的工作流程。',
+      description: '开箱即用，界面美观，功能强大。完全兼容 OpenClaw 生态。隐私优先，支持 SOTA 模型和本地 AI 模型。',
       cta: {
         download: '立即下载',
         learn: '了解更多',
-        github: '即将开源',
+        github: 'GitHub 点赞',
       },
-      badge: '即将开源 • 隐私优先 • 跨平台',
+      badge: '开源免费 • 隐私优先 • 兼容 OpenClaw',
+      // 核心优势
+      highlights: {
+        readyToUse: '开箱即用',
+        beautifulUI: '界面美观',
+        powerful: '功能强大',
+        compatible: '兼容 OpenClaw',
+      },
     },
 
     // 特性部分
@@ -271,20 +292,20 @@ export const translations = {
       subtitle: '选择您的平台，几分钟即可开始使用',
 
       platform: {
-        macos: {
-          title: 'macOS',
-          version: '需要 macOS 10.15 或更高版本',
-          download: '下载 macOS 版本',
+        macosArm: {
+          title: 'macOS (Apple Silicon)',
+          version: '适用于 M1/M2/M3/M4 芯片 • 需要 macOS 10.15 或更高版本',
+          download: '下载 Apple Silicon 版本',
+        },
+        macosIntel: {
+          title: 'macOS (Intel)',
+          version: '适用于 Intel 芯片 Mac • 需要 macOS 10.15 或更高版本',
+          download: '下载 Intel 版本',
         },
         windows: {
           title: 'Windows',
           version: '需要 Windows 10 或更高版本',
           download: '下载 Windows 版本',
-        },
-        web: {
-          title: '网页版',
-          version: '在浏览器中使用，无需安装',
-          launch: '启动网页应用',
         },
       },
 
@@ -314,6 +335,11 @@ export const translations = {
         twitter: 'Twitter',
       },
       copyright: '© 2026 MaudelClaw. 保留所有权利。',
+      // SEO关键词
+      seo: {
+        title: '相关关键词',
+        keywords: 'OpenClaw, Agentic AI, 智能体, OpenClaw 桌面版, OpenClaw 安装, AI Agent, 大模型桌面应用, Claude 桌面版, 隐私优先 AI, 本地 AI 助手, 开源 AI Agent, OpenClaw 生态',
+      },
     },
   },
 }

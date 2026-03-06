@@ -87,12 +87,12 @@ export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
               href="https://github.com/ModelSmart/MaudelClaw"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center space-x-2 px-4 py-2 rounded-lg neon-border text-white hover:bg-white/10 transition-all"
+              className="flex items-center space-x-2 px-4 py-2 rounded-lg bg-gradient-to-r from-gray-800 to-gray-900 text-white hover:from-gray-700 hover:to-gray-800 transition-all border border-gray-700"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
               <Github size={18} />
-              <span>{t.hero.cta.github}</span>
+              <span>{t.nav.github}</span>
             </motion.a>
           </div>
 
@@ -135,6 +135,15 @@ export function Navigation({ t, language, toggleLanguage }: NavigationProps) {
                   <Globe size={18} />
                   <span>{language === 'en' ? '切换到中文' : 'Switch to English'}</span>
                 </button>
+                <a
+                  href="https://github.com/ModelSmart/MaudelClaw"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full flex items-center justify-center space-x-2 px-4 py-2 rounded-lg bg-gray-800 text-white"
+                >
+                  <Github size={18} />
+                  <span>{t.nav.github}</span>
+                </a>
               </div>
             </div>
           </motion.div>

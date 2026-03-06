@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Download, ArrowRight, Zap, Shield, Globe } from 'lucide-react'
+import { Download, ArrowRight, Zap, Shield, Globe, Sparkles, Palette, Cpu, Plug } from 'lucide-react'
 import { TranslationKeys } from '../i18n/translations'
 
 interface HeroProps {
@@ -7,6 +7,21 @@ interface HeroProps {
 }
 
 export function Hero({ t }: HeroProps) {
+  // 核心优势图标
+  const highlights = [
+    { icon: Zap, label: t.hero.highlights.readyToUse, color: 'cyber-green' },
+    { icon: Palette, label: t.hero.highlights.beautifulUI, color: 'cyber-pink' },
+    { icon: Cpu, label: t.hero.highlights.powerful, color: 'cyber-blue' },
+    { icon: Plug, label: t.hero.highlights.compatible, color: 'cyber-purple' },
+  ]
+
+  const colorMap: Record<string, string> = {
+    'cyber-blue': '#00f0ff',
+    'cyber-purple': '#bf00ff',
+    'cyber-pink': '#ff006e',
+    'cyber-green': '#39ff14',
+  }
+
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center tech-grid overflow-hidden">
       {/* Animated Background Elements */}
@@ -120,10 +135,30 @@ export function Hero({ t }: HeroProps) {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
-            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12"
+            className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-8"
           >
             {t.hero.description}
           </motion.p>
+
+          {/* 核心优势标签 */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.55 }}
+            className="flex flex-wrap justify-center gap-3 mb-12"
+          >
+            {highlights.map((item, index) => (
+              <motion.div
+                key={index}
+                className="flex items-center space-x-2 px-4 py-2 rounded-full glass"
+                style={{ border: `1px solid ${colorMap[item.color]}40` }}
+                whileHover={{ scale: 1.05 }}
+              >
+                <item.icon size={16} style={{ color: colorMap[item.color] }} />
+                <span className="text-sm font-medium text-gray-300">{item.label}</span>
+              </motion.div>
+            ))}
+          </motion.div>
 
           {/* CTA Buttons */}
           <motion.div
@@ -161,10 +196,10 @@ export function Hero({ t }: HeroProps) {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { icon: Globe, label: 'Cross-Platform', value: 'Win/Mac/Web' },
+              { icon: Globe, label: 'Cross-Platform', value: 'Win/Mac' },
               { icon: Shield, label: 'Privacy First', value: '100% Local' },
               { icon: Zap, label: 'AI Powered', value: 'SOTA Models' },
-              { icon: Globe, label: 'Languages', value: 'Multi-Model' },
+              { icon: Sparkles, label: 'Ecosystem', value: 'OpenClaw' },
             ].map((stat, index) => (
               <motion.div
                 key={index}
