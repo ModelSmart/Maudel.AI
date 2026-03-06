@@ -10,4 +10,12 @@ export default defineConfig({
     },
   },
   base: './',
+  build: {
+    assetsDir: 'assets',
+    rollupOptions: {
+      output: {
+        manualChunks: undefined,
+      },
+    },
+  },
 })
