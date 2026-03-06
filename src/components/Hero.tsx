@@ -196,10 +196,10 @@ export function Hero({ t }: HeroProps) {
             className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-8"
           >
             {[
-              { icon: Globe, label: 'Cross-Platform', value: 'Win/Mac' },
-              { icon: Shield, label: 'Privacy First', value: '100% Local' },
-              { icon: Zap, label: 'AI Powered', value: 'SOTA Models' },
-              { icon: Sparkles, label: 'Ecosystem', value: 'OpenClaw' },
+              { icon: Globe, label: t.hero.stats.crossPlatform.label, value: t.hero.stats.crossPlatform.value },
+              { icon: Shield, label: t.hero.stats.privacy.label, value: t.hero.stats.privacy.value },
+              { icon: Zap, label: t.hero.stats.aiPowered.label, value: t.hero.stats.aiPowered.value },
+              { icon: Sparkles, label: t.hero.stats.ecosystem.label, value: t.hero.stats.ecosystem.value },
             ].map((stat, index) => (
               <motion.div
                 key={index}

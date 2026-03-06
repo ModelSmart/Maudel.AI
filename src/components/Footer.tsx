@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Github, Twitter, BookOpen, Users } from 'lucide-react'
+import { Github, Twitter, BookOpen, Users, Heart } from 'lucide-react'
 import { TranslationKeys } from '../i18n/translations'
 
 interface FooterProps {
@@ -94,9 +94,12 @@ export function Footer({ t }: FooterProps) {
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
-          className="text-center text-sm text-gray-500"
+          className="text-center space-y-2"
         >
-          {t.footer.copyright}
+          <p className="text-sm text-gray-500">{t.footer.copyright}</p>
+          <p className="text-sm text-gray-600 flex items-center justify-center gap-1">
+            This site is made by MaudelClaw Agent with <Heart size={14} className="text-red-500 fill-red-500" />
+          </p>
         </motion.div>
 
         {/* Decorative Elements */}

@@ -28,6 +28,13 @@ export const translations = {
         powerful: 'Powerful Features',
         compatible: 'OpenClaw Compatible',
       },
+      // 统计数据
+      stats: {
+        crossPlatform: { label: 'Cross-Platform', value: 'Win/Mac' },
+        privacy: { label: 'Privacy First', value: '100% Local' },
+        aiPowered: { label: 'AI Powered', value: 'SOTA Models' },
+        ecosystem: { label: 'Ecosystem', value: 'OpenClaw' },
+      },
     },
 
     // 特性部分
@@ -226,6 +233,13 @@ export const translations = {
         powerful: '功能强大',
         compatible: '兼容 OpenClaw',
       },
+      // 统计数据
+      stats: {
+        crossPlatform: { label: '跨平台', value: 'Win/Mac' },
+        privacy: { label: '隐私优先', value: '100% 本地' },
+        aiPowered: { label: 'AI 驱动', value: 'SOTA 模型' },
+        ecosystem: { label: '生态系统', value: 'OpenClaw' },
+      },
     },
 
     // 特性部分
@@ -421,6 +435,12 @@ export const translations = {
         powerful: '功能強大',
         compatible: '兼容 OpenClaw',
       },
+      stats: {
+        crossPlatform: { label: '跨平台', value: 'Win/Mac' },
+        privacy: { label: '隱私優先', value: '100% 本地' },
+        aiPowered: { label: 'AI 驅動', value: 'SOTA 模型' },
+        ecosystem: { label: '生態系統', value: 'OpenClaw' },
+      },
     },
     features: {
       title: '核心特性',
@@ -492,6 +512,12 @@ export const translations = {
       cta: { download: '今すぐダウンロード', learn: '詳細を見る', github: 'GitHubでスター' },
       badge: 'オープンソース • プライバシー優先 • OpenClaw互換',
       highlights: { readyToUse: 'すぐに使える', beautifulUI: '美しいUI', powerful: '強力な機能', compatible: 'OpenClaw互換' },
+      stats: {
+        crossPlatform: { label: 'クロスプラットフォーム', value: 'Win/Mac' },
+        privacy: { label: 'プライバシー優先', value: '100% ローカル' },
+        aiPowered: { label: 'AI搭載', value: 'SOTAモデル' },
+        ecosystem: { label: 'エコシステム', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'コア機能', subtitle: 'AI自動化の未来に向けた強力な機能',
@@ -546,6 +572,12 @@ export const translations = {
       cta: { download: 'Télécharger', learn: 'En savoir plus', github: 'Star sur GitHub' },
       badge: 'Open Source • Confidentialité • Compatible OpenClaw',
       highlights: { readyToUse: 'Prêt à l\'emploi', beautifulUI: 'Interface Magnifique', powerful: 'Fonctionnalités Puissantes', compatible: 'Compatible OpenClaw' },
+      stats: {
+        crossPlatform: { label: 'Multiplateforme', value: 'Win/Mac' },
+        privacy: { label: 'Confidentialité', value: '100% Local' },
+        aiPowered: { label: 'IA Puissante', value: 'Modèles SOTA' },
+        ecosystem: { label: 'Écosystème', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'Fonctionnalités Principales', subtitle: 'Capacités puissantes pour l\'automatisation IA',
@@ -600,6 +632,12 @@ export const translations = {
       cta: { download: 'Jetzt Herunterladen', learn: 'Mehr Erfahren', github: 'Auf GitHub' },
       badge: 'Open Source • Datenschutz • OpenClaw-Kompatibel',
       highlights: { readyToUse: 'Sofort Einsatzbereit', beautifulUI: 'Schöne Oberfläche', powerful: 'Leistungsstarke Funktionen', compatible: 'OpenClaw-Kompatibel' },
+      stats: {
+        crossPlatform: { label: 'Plattformübergreifend', value: 'Win/Mac' },
+        privacy: { label: 'Datenschutz', value: '100% Lokal' },
+        aiPowered: { label: 'KI-gestützt', value: 'SOTA-Modelle' },
+        ecosystem: { label: 'Ökosystem', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'Hauptfunktionen', subtitle: 'Leistungsstarke Fähigkeiten für die KI-Automatisierung',
@@ -654,6 +692,12 @@ export const translations = {
       cta: { download: 'Descargar Ahora', learn: 'Más Información', github: 'GitHub' },
       badge: 'Código Abierto • Privacidad • Compatible con OpenClaw',
       highlights: { readyToUse: 'Listo para Usar', beautifulUI: 'Interfaz Hermosa', powerful: 'Funciones Potentes', compatible: 'Compatible OpenClaw' },
+      stats: {
+        crossPlatform: { label: 'Multiplataforma', value: 'Win/Mac' },
+        privacy: { label: 'Privacidad', value: '100% Local' },
+        aiPowered: { label: 'Potenciado por IA', value: 'Modelos SOTA' },
+        ecosystem: { label: 'Ecosistema', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'Características Principales', subtitle: 'Capacidades potentes para la automatización IA',
@@ -708,6 +752,12 @@ export const translations = {
       cta: { download: 'Скачать', learn: 'Подробнее', github: 'GitHub' },
       badge: 'Открытый код • Приватность • Совместимость с OpenClaw',
       highlights: { readyToUse: 'Готов к использованию', beautifulUI: 'Красивый интерфейс', powerful: 'Мощные функции', compatible: 'Совместимость с OpenClaw' },
+      stats: {
+        crossPlatform: { label: 'Кроссплатформенность', value: 'Win/Mac' },
+        privacy: { label: 'Приватность', value: '100% Локально' },
+        aiPowered: { label: 'На базе ИИ', value: 'Модели SOTA' },
+        ecosystem: { label: 'Экосистема', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'Основные возможности', subtitle: 'Мощные функции для автоматизации ИИ',
@@ -762,6 +812,12 @@ export const translations = {
       cta: { download: 'Tải ngay', learn: 'Tìm hiểu thêm', github: 'GitHub' },
       badge: 'Mã nguồn mở • Bảo mật • Tương thích OpenClaw',
       highlights: { readyToUse: 'Sẵn sàng sử dụng', beautifulUI: 'Giao diện đẹp', powerful: 'Tính năng mạnh mẽ', compatible: 'Tương thích OpenClaw' },
+      stats: {
+        crossPlatform: { label: 'Đa nền tảng', value: 'Win/Mac' },
+        privacy: { label: 'Bảo mật', value: '100% Cục bộ' },
+        aiPowered: { label: 'AI Tăng cường', value: 'Mô hình SOTA' },
+        ecosystem: { label: 'Hệ sinh thái', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'Tính năng chính', subtitle: 'Khả năng mạnh mẽ cho tự động hóa AI',
@@ -816,6 +872,12 @@ export const translations = {
       cta: { download: 'تحميل الآن', learn: 'معرفة المزيد', github: 'GitHub' },
       badge: 'مفتوح المصدر • الخصوصية • متوافق مع OpenClaw',
       highlights: { readyToUse: 'جاهز للاستخدام', beautifulUI: 'واجهة جميلة', powerful: 'ميزات قوية', compatible: 'متوافق مع OpenClaw' },
+      stats: {
+        crossPlatform: { label: 'متعدد المنصات', value: 'Win/Mac' },
+        privacy: { label: 'الخصوصية', value: '100% محلي' },
+        aiPowered: { label: 'مدعوم بالذكاء الاصطناعي', value: 'نماذج SOTA' },
+        ecosystem: { label: 'النظام البيئي', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'الميزات الرئيسية', subtitle: 'قدرات قوية لأتمتة الذكاء الاصطناعي',
@@ -870,6 +932,12 @@ export const translations = {
       cta: { download: 'ดาวน์โหลด', learn: 'เรียนรู้เพิ่มเติม', github: 'GitHub' },
       badge: 'โอเพนซอร์ส • ความเป็นส่วนตัว • เข้ากันได้กับ OpenClaw',
       highlights: { readyToUse: 'พร้อมใช้งาน', beautifulUI: 'อินเทอร์เฟซสวยงาม', powerful: 'ฟีเจอร์ทรงพลัง', compatible: 'เข้ากันได้กับ OpenClaw' },
+      stats: {
+        crossPlatform: { label: 'ข้ามแพลตฟอร์ม', value: 'Win/Mac' },
+        privacy: { label: 'ความเป็นส่วนตัว', value: '100% ในเครื่อง' },
+        aiPowered: { label: 'ขับเคลื่อนด้วย AI', value: 'โมเดล SOTA' },
+        ecosystem: { label: 'ระบบนิเวศ', value: 'OpenClaw' },
+      },
     },
     features: {
       title: 'คุณสมบัติหลัก', subtitle: 'ความสามารถทรงพลังสำหรับระบบอัตโนมัติ AI',
