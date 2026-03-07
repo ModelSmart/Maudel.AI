@@ -1,11 +1,11 @@
 # Robots.txt for MaudelClaw
-# https://maudelclaw.com
+# https://maudelclaw.ai
 
 User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://maudelclaw.com/sitemap.xml
+Sitemap: https://maudelclaw.ai/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1

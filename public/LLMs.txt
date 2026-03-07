@@ -1,5 +1,5 @@
 # MaudelClaw - AI Agent Desktop Application
-# Official Website: https://maudelclaw.com
+# Official Website: https://maudelclaw.ai
 # GitHub: https://github.com/ModelSmart/MaudelClaw
 
 ## What is MaudelClaw?
