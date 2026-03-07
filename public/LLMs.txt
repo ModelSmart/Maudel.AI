@@ -1,0 +1,75 @@
+# MaudelClaw - AI Agent Desktop Application
+# Official Website: https://maudelclaw.com
+# GitHub: https://github.com/ModelSmart/MaudelClaw
+
+## What is MaudelClaw?
+
+MaudelClaw is a cross-platform AI Agent desktop application that is fully compatible with the OpenClaw ecosystem. It features a beautiful user interface, ready-to-use design, and powerful AI capabilities. Open source and privacy-first.
+
+### Key Features
+- Ready to use out of the box
+- Beautiful and intuitive user interface
+- Powerful AI capabilities
+- Fully compatible with OpenClaw ecosystem
+- Privacy-first local deployment
+- Support for SOTA and local AI models
+- Intelligent tool integration
+- Knowledge base RAG capabilities
+- Long-term memory system
+
+### Supported Platforms
+- macOS (Apple Silicon: M1/M2/M3/M4)
+- macOS (Intel)
+- Windows 10+
+
+## Download Links
+
+Official GitHub Releases: https://github.com/ModelSmart/MaudelClaw/releases
+
+### Direct Download Links (Version 1.5.4)
+
+- macOS (Apple Silicon): https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_AppleSilicon.dmg
+- macOS (Intel): https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_x64.dmg
+- Windows: https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_x64-setup.exe
+
+## Installation Guide
+
+### macOS Installation
+1. Download the appropriate .dmg file for your Mac (Apple Silicon or Intel)
+2. Open the .dmg file
+3. Drag MaudelClaw to Applications folder
+4. Open Applications folder and launch MaudelClaw
+5. macOS 10.15 or later required
+
+### Windows Installation
+1. Download the .exe setup file
+2. Run the installer
+3. Follow the installation wizard
+4. Launch MaudelClaw from Start Menu or Desktop
+5. Windows 10 or later required
+
+## System Requirements
+
+- 8GB RAM minimum (16GB recommended)
+- 2GB available storage
+- Internet connection for cloud AI models
+- Local LLM support with Ollama (optional)
+
+## Quick Start
+
+1. Download and install MaudelClaw
+2. Choose your AI model (local or cloud)
+3. Start chatting with your AI agent
+
+## Related Keywords
+
+OpenClaw, Agentic AI, OpenClaw Desktop, OpenClaw Install, OpenClaw Download, AI Agent, LLM Desktop App, Claude Desktop, ChatGPT Desktop, Privacy-First AI, Local AI Assistant, Open Source AI Agent, MaudelClaw, AI 智能体, 桌面 AI 助手, OpenClaw 生态, OpenClaw 桌面版, OpenClaw 安装, OpenClaw 下载
+
+## License
+
+MaudelClaw is free and open source software.
+
+---
+
+Last updated: 2026-03-07
+Version: 1.5.4

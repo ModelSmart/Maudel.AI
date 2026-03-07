@@ -85,6 +85,17 @@ export function Navigation({ t, language, changeLanguage }: NavigationProps) {
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyber-blue group-hover:w-full transition-all duration-300" />
               </motion.a>
             ))}
+            {/* LLMs.txt Link */}
+            <motion.a
+              href="/LLMs.txt"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 hover:text-cyber-purple transition-colors relative group text-sm"
+              whileHover={{ y: -2 }}
+            >
+              {t.nav.llms}
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-cyber-purple group-hover:w-full transition-all duration-300" />
+            </motion.a>
           </div>
 
           {/* Actions */}
@@ -175,6 +186,16 @@ export function Navigation({ t, language, changeLanguage }: NavigationProps) {
                   {t.nav[item.key as keyof typeof t.nav]}
                 </a>
               ))}
+              {/* LLMs.txt Link */}
+              <a
+                href="/LLMs.txt"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className="block py-2 text-gray-300 hover:text-cyber-purple transition-colors"
+              >
+                {t.nav.llms}
+              </a>
 
               {/* Mobile Language Selector */}
               <div className="pt-4 border-t border-white/10">

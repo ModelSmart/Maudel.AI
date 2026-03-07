@@ -8,6 +8,7 @@ export const translations = {
       download: 'Download',
       docs: 'Docs',
       github: 'GitHub',
+      llms: 'For LLMs',
     },
 
     // 首页
@@ -213,6 +214,7 @@ export const translations = {
       download: '立即下载',
       docs: '文档',
       github: 'GitHub',
+      llms: 'LLMs 说明',
     },
 
     // 首页
@@ -418,6 +420,7 @@ export const translations = {
       download: '立即下載',
       docs: '文檔',
       github: 'GitHub',
+      llms: 'LLMs 說明',
     },
     hero: {
       title: 'MaudelClaw',
@@ -504,7 +507,7 @@ export const translations = {
 
   // 日本語
   ja: {
-    nav: { home: 'ホーム', features: '機能', architecture: 'アーキテクチャ', download: 'ダウンロード', docs: 'ドキュメント', github: 'GitHub' },
+    nav: { home: 'ホーム', features: '機能', architecture: 'アーキテクチャ', download: 'ダウンロード', docs: 'ドキュメント', github: 'GitHub', llms: 'LLMs用' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'クロスプラットフォーム AI エージェントシステム',
@@ -564,7 +567,7 @@ export const translations = {
 
   // Français
   fr: {
-    nav: { home: 'Accueil', features: 'Fonctionnalités', architecture: 'Architecture', download: 'Télécharger', docs: 'Docs', github: 'GitHub' },
+    nav: { home: 'Accueil', features: 'Fonctionnalités', architecture: 'Architecture', download: 'Télécharger', docs: 'Docs', github: 'GitHub', llms: 'Pour LLMs' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'Système d\'Agent IA Multiplateforme',
@@ -624,7 +627,7 @@ export const translations = {
 
   // Deutsch
   de: {
-    nav: { home: 'Startseite', features: 'Funktionen', architecture: 'Architektur', download: 'Herunterladen', docs: 'Dokumentation', github: 'GitHub' },
+    nav: { home: 'Startseite', features: 'Funktionen', architecture: 'Architektur', download: 'Herunterladen', docs: 'Dokumentation', github: 'GitHub', llms: 'Für LLMs' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'Plattformübergreifendes KI-Agentensystem',
@@ -684,7 +687,7 @@ export const translations = {
 
   // Español
   es: {
-    nav: { home: 'Inicio', features: 'Características', architecture: 'Arquitectura', download: 'Descargar', docs: 'Documentos', github: 'GitHub' },
+    nav: { home: 'Inicio', features: 'Características', architecture: 'Arquitectura', download: 'Descargar', docs: 'Documentos', github: 'GitHub', llms: 'Para LLMs' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'Sistema de Agente IA Multiplataforma',
@@ -744,7 +747,7 @@ export const translations = {
 
   // Русский
   ru: {
-    nav: { home: 'Главная', features: 'Возможности', architecture: 'Архитектура', download: 'Скачать', docs: 'Документация', github: 'GitHub' },
+    nav: { home: 'Главная', features: 'Возможности', architecture: 'Архитектура', download: 'Скачать', docs: 'Документация', github: 'GitHub', llms: 'Для LLM' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'Кроссплатформенная система ИИ-агентов',
@@ -804,7 +807,7 @@ export const translations = {
 
   // Tiếng Việt
   vi: {
-    nav: { home: 'Trang chủ', features: 'Tính năng', architecture: 'Kiến trúc', download: 'Tải xuống', docs: 'Tài liệu', github: 'GitHub' },
+    nav: { home: 'Trang chủ', features: 'Tính năng', architecture: 'Kiến trúc', download: 'Tải xuống', docs: 'Tài liệu', github: 'GitHub', llms: 'Cho LLM' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'Hệ thống AI Agent đa nền tảng',
@@ -864,7 +867,7 @@ export const translations = {
 
   // العربية
   ar: {
-    nav: { home: 'الرئيسية', features: 'الميزات', architecture: 'الهيكل', download: 'تحميل', docs: 'الوثائق', github: 'GitHub' },
+    nav: { home: 'الرئيسية', features: 'الميزات', architecture: 'الهيكل', download: 'تحميل', docs: 'الوثائق', github: 'GitHub', llms: 'لـ LLMs' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'نظام وكيل الذكاء الاصطناعي متعدد المنصات',
@@ -924,7 +927,7 @@ export const translations = {
 
   // ไทย
   th: {
-    nav: { home: 'หน้าแรก', features: 'คุณสมบัติ', architecture: 'สถาปัตยกรรม', download: 'ดาวน์โหลด', docs: 'เอกสาร', github: 'GitHub' },
+    nav: { home: 'หน้าแรก', features: 'คุณสมบัติ', architecture: 'สถาปัตยกรรม', download: 'ดาวน์โหลด', docs: 'เอกสาร', github: 'GitHub', llms: 'สำหรับ LLM' },
     hero: {
       title: 'MaudelClaw',
       subtitle: 'ระบบ AI Agent ข้ามแพลตฟอร์ม',
