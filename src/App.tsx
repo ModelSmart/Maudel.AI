@@ -16,9 +16,9 @@ function App() {
       <Hero t={t} />
       <Features t={t} />
       <Architecture t={t} />
-      <Download t={t} />
+      <Download t={t} language={language} />
       <FAQ t={t} />
-      <Footer t={t} />
+      <Footer t={t} language={language} />
     </div>
   )
 }

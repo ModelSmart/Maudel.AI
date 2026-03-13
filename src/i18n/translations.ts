@@ -159,6 +159,17 @@ export const translations = {
         step2: 'Choose your AI model (local or cloud)',
         step3: 'Start chatting with your AI agent',
       },
+
+      baiduPan: {
+        hint: 'Slow GitHub download? Try Baidu Pan',
+        link: 'Baidu Pan Download',
+        password: 'Password',
+      },
+
+      githubReleases: {
+        prefix: 'View all releases on',
+        link: 'GitHub Releases',
+      },
     },
 
     // 页脚
@@ -168,9 +179,11 @@ export const translations = {
         documentation: 'Documentation',
         community: 'Community',
         github: 'GitHub',
-        twitter: 'Twitter',
+        x: 'X',
       },
       copyright: '© 2026 MaudelClaw. All rights reserved.',
+      company: '',
+      contact: 'Contact Us',
       // SEO关键词
       seo: {
         title: 'Related Keywords',
@@ -196,7 +209,7 @@ export const translations = {
       },
       free: {
         question: 'Is MaudelClaw free and open source?',
-        answer: 'Yes, MaudelClaw is completely free and open source. You can download it from GitHub and the source code is available for review and contribution.',
+        answer: 'MaudelClaw offers a free version for personal users. The current release includes some enterprise features that are being separated by our team. Once the separation is complete, the community edition will be fully open source. Please follow our GitHub for updates.',
       },
       models: {
         question: 'What AI models does MaudelClaw support?',
@@ -365,6 +378,17 @@ export const translations = {
         step2: '选择您的 AI 模型（本地或云端）',
         step3: '开始与您的 AI 代理对话',
       },
+
+      baiduPan: {
+        hint: 'GitHub 下载慢？试试百度网盘',
+        link: '百度网盘下载',
+        password: '提取码',
+      },
+
+      githubReleases: {
+        prefix: '查看所有版本',
+        link: 'GitHub Releases',
+      },
     },
 
     // 页脚
@@ -374,9 +398,11 @@ export const translations = {
         documentation: '文档',
         community: '社区',
         github: 'GitHub',
-        twitter: 'Twitter',
+        x: 'X',
       },
       copyright: '© 2026 MaudelClaw. 保留所有权利。',
+      company: '北京摩豆智能科技有限公司',
+      contact: '联系我们',
       // SEO关键词
       seo: {
         title: '相关关键词',
@@ -402,7 +428,7 @@ export const translations = {
       },
       free: {
         question: 'MaudelClaw 是免费开源的吗？',
-        answer: '是的，MaudelClaw 完全免费且开源。您可以从 GitHub 下载，源代码可供审查和贡献。',
+        answer: 'MaudelClaw 为个人用户提供免费版本。当前版本包含部分企业级功能，开发团队正在进行功能分离工作，分离完成后社区版本将完全开源。请关注 GitHub 获取最新进展。',
       },
       models: {
         question: 'MaudelClaw 支持哪些 AI 模型？',
@@ -487,11 +513,24 @@ export const translations = {
       },
       requirements: { title: '系統要求', ram: '8GB 內存（推薦 16GB）', storage: '2GB 可用存儲空間', network: '雲端模型需要網絡連接', optional: '本地 LLM 支持（需安裝 Ollama）' },
       quickStart: { title: '快速開始', step1: '下載並安裝 MaudelClaw', step2: '選擇您的 AI 模型', step3: '開始與您的 AI 代理對話' },
+
+      baiduPan: {
+        hint: 'GitHub 下載慢？試試百度网盘',
+        link: '百度网盘下载',
+        password: '提取码',
+      },
+
+      githubReleases: {
+        prefix: '查看所有版本',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: '面向注重隱私的用戶的開源 AI Agent 系統',
-      links: { documentation: '文檔', community: '社區', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: '文檔', community: '社區', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. 保留所有權利。',
+      company: '北京摩豆智能科技有限公司',
+      contact: '聯繫我們',
       seo: { title: '相關關鍵詞', keywords: 'OpenClaw, Agentic AI, 智能體, OpenClaw 桌面版, AI Agent, 本地 AI 助手' },
     },
     faq: {
@@ -548,11 +587,24 @@ export const translations = {
       },
       requirements: { title: 'システム要件', ram: '8GB RAM（16GB推奨）', storage: '2GBの空き容量', network: 'クラウドモデルにはインターネット接続', optional: 'OllamaでローカルLLMサポート（オプション）' },
       quickStart: { title: 'クイックスタート', step1: 'MaudelClawをダウンロードしてインストール', step2: 'AIモデルを選択', step3: 'AIエージェントとのチャットを開始' },
+
+      baiduPan: {
+        hint: 'GitHubのダウンロードが遅い？Baidu Panをお試しください',
+        link: 'Baidu Panダウンロード',
+        password: 'パスワード',
+      },
+
+      githubReleases: {
+        prefix: 'すべてのリリースを表示',
+        link: 'GitHubリリース',
+      },
     },
     footer: {
       description: 'プライバシー重視のユーザー向けオープンソースAIエージェントシステム',
-      links: { documentation: 'ドキュメント', community: 'コミュニティ', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'ドキュメント', community: 'コミュニティ', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. All rights reserved.',
+      company: '',
+      contact: 'お問い合わせ',
       seo: { title: '関連キーワード', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -608,11 +660,24 @@ export const translations = {
       },
       requirements: { title: 'Configuration Requise', ram: '8 Go RAM (16 Go recommandés)', storage: '2 Go d\'espace disponible', network: 'Connexion internet pour modèles cloud', optional: 'Support LLM local avec Ollama (optionnel)' },
       quickStart: { title: 'Démarrage Rapide', step1: 'Télécharger et installer MaudelClaw', step2: 'Choisir votre modèle IA', step3: 'Commencer à discuter avec votre agent IA' },
+
+      baiduPan: {
+        hint: 'Téléchargement GitHub lent? Essayez Baidu Pan',
+        link: 'Téléchargement Baidu Pan',
+        password: 'Mot de passe',
+      },
+
+      githubReleases: {
+        prefix: 'Voir toutes les versions sur',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'Système d\'Agent IA open-source pour les soucieux de la confidentialité',
-      links: { documentation: 'Documentation', community: 'Communauté', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'Documentation', community: 'Communauté', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. Tous droits réservés.',
+      company: '',
+      contact: 'Contactez-nous',
       seo: { title: 'Mots-clés Associés', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -668,11 +733,24 @@ export const translations = {
       },
       requirements: { title: 'Systemanforderungen', ram: '8 GB RAM (16 GB empfohlen)', storage: '2 GB verfügbarer Speicher', network: 'Internetverbindung für Cloud-Modelle', optional: 'Lokale LLM-Unterstützung mit Ollama (optional)' },
       quickStart: { title: 'Schnellstart', step1: 'MaudelClaw herunterladen und installieren', step2: 'KI-Modell auswählen', step3: 'Mit KI-Agenten chatten' },
+
+      baiduPan: {
+        hint: 'Langsamer GitHub-Download? Versuchen Sie Baidu Pan',
+        link: 'Baidu Pan-Download',
+        password: 'Passwort',
+      },
+
+      githubReleases: {
+        prefix: 'Alle Releases anzeigen auf',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'Open-Source-KI-Agentensystem für datenschutzbewusste Nutzer',
-      links: { documentation: 'Dokumentation', community: 'Community', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'Dokumentation', community: 'Community', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. Alle Rechte vorbehalten.',
+      company: '',
+      contact: 'Kontakt',
       seo: { title: 'Verwandte Schlüsselwörter', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -728,11 +806,24 @@ export const translations = {
       },
       requirements: { title: 'Requisitos del Sistema', ram: '8 GB RAM (16 GB recomendados)', storage: '2 GB de espacio disponible', network: 'Conexión a internet para modelos en la nube', optional: 'Soporte LLM local con Ollama (opcional)' },
       quickStart: { title: 'Inicio Rápido', step1: 'Descargar e instalar MaudelClaw', step2: 'Elegir tu modelo de IA', step3: 'Comenzar a chatear con tu agente IA' },
+
+      baiduPan: {
+        hint: '¿Descarga lenta de GitHub? Prueba Baidu Pan',
+        link: 'Descarga Baidu Pan',
+        password: 'Contraseña',
+      },
+
+      githubReleases: {
+        prefix: 'Ver todas las versiones en',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'Sistema de Agente IA de código abierto para usuarios conscientes de la privacidad',
-      links: { documentation: 'Documentación', community: 'Comunidad', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'Documentación', community: 'Comunidad', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. Todos los derechos reservados.',
+      company: '',
+      contact: 'Contáctenos',
       seo: { title: 'Palabras Clave Relacionadas', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -788,11 +879,24 @@ export const translations = {
       },
       requirements: { title: 'Системные требования', ram: '8 ГБ ОЗУ (рекомендуется 16 ГБ)', storage: '2 ГБ свободного места', network: 'Интернет для облачных моделей', optional: 'Локальная LLM поддержка через Ollama (опционально)' },
       quickStart: { title: 'Быстрый старт', step1: 'Скачать и установить MaudelClaw', step2: 'Выбрать модель ИИ', step3: 'Начать диалог с ИИ-агентом' },
+
+      baiduPan: {
+        hint: 'Медленная загрузка GitHub? Попробуйте Baidu Pan',
+        link: 'Скачать с Baidu Pan',
+        password: 'Пароль',
+      },
+
+      githubReleases: {
+        prefix: 'Смотреть все версии на',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'Система ИИ-агентов с открытым кодом для приверженцев приватности',
-      links: { documentation: 'Документация', community: 'Сообщество', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'Документация', community: 'Сообщество', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. Все права защищены.',
+      company: '',
+      contact: 'Связаться с нами',
       seo: { title: 'Связанные ключевые слова', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -848,11 +952,24 @@ export const translations = {
       },
       requirements: { title: 'Yêu cầu hệ thống', ram: '8GB RAM (khuyến nghị 16GB)', storage: '2GB dung lượng khả dụng', network: 'Kết nối internet cho mô hình đám mây', optional: 'Hỗ trợ LLM cục bộ với Ollama (tùy chọn)' },
       quickStart: { title: 'Khởi động nhanh', step1: 'Tải và cài đặt MaudelClaw', step2: 'Chọn mô hình AI', step3: 'Bắt đầu trò chuyện với AI agent' },
+
+      baiduPan: {
+        hint: 'Tải GitHub chậm? Thử Baidu Pan',
+        link: 'Tải Baidu Pan',
+        password: 'Mật khẩu',
+      },
+
+      githubReleases: {
+        prefix: 'Xem tất cả phiên bản trên',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'Hệ thống AI Agent mã nguồn mở cho người dùng quan tâm bảo mật',
-      links: { documentation: 'Tài liệu', community: 'Cộng đồng', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'Tài liệu', community: 'Cộng đồng', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. Đã đăng ký bản quyền.',
+      company: '',
+      contact: 'Liên hệ',
       seo: { title: 'Từ khóa liên quan', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -908,11 +1025,24 @@ export const translations = {
       },
       requirements: { title: 'متطلبات النظام', ram: '8 جيجابايت RAM (16 جيجابايت موصى به)', storage: '2 جيجابايت مساحة متوفرة', network: 'اتصال إنترنت للنماذج السحابية', optional: 'دعم LLM المحلي مع Ollama (اختياري)' },
       quickStart: { title: 'البدء السريع', step1: 'تحميل وتثبيت MaudelClaw', step2: 'اختر نموذج الذكاء الاصطناعي', step3: 'ابدأ المحادثة مع وكيل الذكاء الاصطناعي' },
+
+      baiduPan: {
+        hint: 'تحميل GitHub بطيء؟ جرب Baidu Pan',
+        link: 'تحميل Baidu Pan',
+        password: 'كلمة المرور',
+      },
+
+      githubReleases: {
+        prefix: 'عرض جميع الإصدارات على',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'نظام وكيل الذكاء الاصطناعي مفتوح المصدر للمهتمين بالخصوصية',
-      links: { documentation: 'الوثائق', community: 'المجتمع', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'الوثائق', community: 'المجتمع', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw. جميع الحقوق محفوظة.',
+      company: '',
+      contact: 'اتصل بنا',
       seo: { title: 'الكلمات المفتاحية ذات الصلة', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {
@@ -968,11 +1098,24 @@ export const translations = {
       },
       requirements: { title: 'ความต้องการของระบบ', ram: 'RAM 8GB (แนะนำ 16GB)', storage: 'พื้นที่ว่าง 2GB', network: 'การเชื่อมต่ออินเทอร์เน็ตสำหรับโมเดลคลาวด์', optional: 'รองรับ LLM ในเครื่องด้วย Ollama (ไม่บังคับ)' },
       quickStart: { title: 'เริ่มต้นอย่างรวดเร็ว', step1: 'ดาวน์โหลดและติดตั้ง MaudelClaw', step2: 'เลือกโมเดล AI', step3: 'เริ่มแชทกับ AI agent' },
+
+      baiduPan: {
+        hint: 'GitHub โหลดช้า? ลอง Baidu Pan',
+        link: 'ดาวน์โหลด Baidu Pan',
+        password: 'รหัสผ่าน',
+      },
+
+      githubReleases: {
+        prefix: 'ดูทุกเวอร์ชันบน',
+        link: 'GitHub Releases',
+      },
     },
     footer: {
       description: 'ระบบ AI Agent โอเพนซอร์สสำหรับผู้ให้ความสำคัญกับความเป็นส่วนตัว',
-      links: { documentation: 'เอกสาร', community: 'ชุมชน', github: 'GitHub', twitter: 'Twitter' },
+      links: { documentation: 'เอกสาร', community: 'ชุมชน', github: 'GitHub', x: 'X' },
       copyright: '© 2026 MaudelClaw สงวนลิขสิทธิ์',
+      company: '',
+      contact: 'ติดต่อเรา',
       seo: { title: 'คำหลักที่เกี่ยวข้อง', keywords: 'OpenClaw, Agentic AI, OpenClaw Desktop, AI Agent, LLM Desktop App' },
     },
     faq: {

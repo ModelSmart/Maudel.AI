@@ -1,17 +1,20 @@
 import { motion } from 'framer-motion'
-import { Github, Twitter, BookOpen, Users, Heart } from 'lucide-react'
-import { TranslationKeys } from '../i18n/translations'
+import { Github, X, BookOpen, Users, Heart, Mail } from 'lucide-react'
+import { TranslationKeys, Language } from '../i18n/translations'
 
 interface FooterProps {
   t: TranslationKeys
+  language: Language
 }
+export function Footer({ t, language }: FooterProps) {
+  // 检测是否为中文用户
+  const isChineseUser = language === 'zh' || language === 'zh-TW'
 
-export function Footer({ t }: FooterProps) {
   const links = [
     { icon: BookOpen, label: t.footer.links.documentation, href: '#' },
     { icon: Users, label: t.footer.links.community, href: '#' },
     { icon: Github, label: t.footer.links.github, href: 'https://github.com/ModelSmart/MaudelClaw' },
-    { icon: Twitter, label: t.footer.links.twitter, href: 'https://twitter.com' },
+    { icon: X, label: t.footer.links.x, href: 'https://x.com/MaudelClaw' },
   ]
 
   return (
@@ -97,9 +100,22 @@ export function Footer({ t }: FooterProps) {
           className="text-center space-y-2"
         >
           <p className="text-sm text-gray-500">{t.footer.copyright}</p>
+          {isChineseUser && t.footer.company && (
+            <p className="text-sm text-gray-400">{t.footer.company}</p>
+          )}
           <p className="text-sm text-gray-600 flex items-center justify-center gap-1">
             This site is made by MaudelClaw Agent with <Heart size={14} className="text-red-500 fill-red-500" />
           </p>
+          {/* Contact Email */}
+          <div className="flex items-center justify-center gap-2 mt-2">
+            <Mail size={14} className="text-gray-500" />
+            <a
+              href="mailto:halo@maudelclaw.ai"
+              className="text-sm text-cyber-blue hover:text-cyber-blue/80 transition-colors"
+            >
+              halo@maudelclaw.ai
+            </a>
+          </div>
         </motion.div>
 
         {/* Decorative Elements */}

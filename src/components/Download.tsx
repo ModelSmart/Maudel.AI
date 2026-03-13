@@ -1,12 +1,25 @@
 import { motion } from 'framer-motion'
-import { Download as DownloadIcon, Apple, Monitor, CheckCircle, ArrowRight } from 'lucide-react'
-import { TranslationKeys } from '../i18n/translations'
+import { Download as DownloadIcon, Apple, Monitor, CheckCircle, ArrowRight, Cloud } from 'lucide-react'
+import { TranslationKeys, Language } from '../i18n/translations'
 
 interface DownloadProps {
   t: TranslationKeys
+  language: Language
 }
 
-export function Download({ t }: DownloadProps) {
+export function Download({ t, language }: DownloadProps) {
+  // 检测是否为中文用户
+  const isChineseUser = language === 'zh' || language === 'zh-TW'
+
+  // 百度网盘下载信息
+  const baiduPanInfo = {
+    url: 'https://pan.baidu.com/s/1TcBJ6tbbjcd_lPpSAUC0eA',
+    password: '6iwy',
+  }
+
+  // GitHub Releases 页面
+  const githubReleasesUrl = 'https://github.com/ModelSmart/MaudelClaw/releases/tag/1.6.2'
+
   const platforms = [
     {
       id: 'macos-arm',
@@ -14,7 +27,7 @@ export function Download({ t }: DownloadProps) {
       title: t.download.platform.macosArm.title,
       version: t.download.platform.macosArm.version,
       buttonText: t.download.platform.macosArm.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_AppleSilicon.dmg',
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.2/MaudelClaw_1.6.2_AppleSilicon.dmg',
       color: 'cyber-blue',
       available: true,
     },
@@ -24,7 +37,7 @@ export function Download({ t }: DownloadProps) {
       title: t.download.platform.macosIntel.title,
       version: t.download.platform.macosIntel.version,
       buttonText: t.download.platform.macosIntel.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_x64.dmg',
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.2/MaudelClaw_1.6.2_x64.dmg',
       color: 'cyber-purple',
       available: true,
     },
@@ -34,7 +47,7 @@ export function Download({ t }: DownloadProps) {
       title: t.download.platform.windows.title,
       version: t.download.platform.windows.version,
       buttonText: t.download.platform.windows.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.5.4/MaudelClaw_1.5.4_x64-setup.exe',
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.2/MaudelClaw_1.6.2_x64-setup.exe',
       color: 'cyber-pink',
       available: true,
     },
@@ -136,6 +149,61 @@ export function Download({ t }: DownloadProps) {
             </motion.div>
           ))}
         </div>
+
+        {/* Baidu Pan Alternative for Chinese Users */}
+        {isChineseUser && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mb-16"
+          >
+            <div className="glass rounded-xl p-6 max-w-2xl mx-auto border border-cyber-green/30">
+              <div className="flex items-center justify-between flex-wrap gap-4">
+                <div className="flex items-center space-x-3">
+                  <Cloud size={24} className="text-cyber-green" />
+                  <div>
+                    <p className="text-sm text-gray-400">{t.download.baiduPan.hint}</p>
+                    <div className="flex items-center space-x-2 mt-1">
+                      <a
+                        href={baiduPanInfo.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-cyber-green hover:text-cyber-green/80 font-medium underline underline-offset-2"
+                      >
+                        {t.download.baiduPan.link}
+                      </a>
+                      <span className="text-gray-500">|</span>
+                      <span className="text-gray-400">
+                        {t.download.baiduPan.password}: <code className="bg-gray-800 px-2 py-0.5 rounded text-cyber-green">{baiduPanInfo.password}</code>
+                      </span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
+        {/* GitHub Releases Link */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="mb-16 text-center"
+        >
+          <p className="text-gray-400 text-sm">
+            {t.download.githubReleases.prefix}{' '}
+            <a
+              href={githubReleasesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cyber-blue hover:text-cyber-blue/80 underline underline-offset-2"
+            >
+              {t.download.githubReleases.link}
+            </a>
+          </p>
+        </motion.div>
 
         {/* Requirements & Quick Start */}
         <div className="grid md:grid-cols-2 gap-8">
