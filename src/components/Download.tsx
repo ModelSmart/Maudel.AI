@@ -18,7 +18,7 @@ export function Download({ t, language }: DownloadProps) {
   }
 
   // GitHub Releases 页面
-  const githubReleasesUrl = 'https://github.com/ModelSmart/MaudelClaw/releases/tag/1.6.3'
+  const githubReleasesUrl = 'https://github.com/ModelSmart/MaudelClaw/releases/tag/1.6.4'
 
   const platforms = [
     {
@@ -27,7 +27,7 @@ export function Download({ t, language }: DownloadProps) {
       title: t.download.platform.macosArm.title,
       version: t.download.platform.macosArm.version,
       buttonText: t.download.platform.macosArm.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.3/MaudelClaw_1.6.3_AppleSilicon.dmg',
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.4/MaudelClaw_1.6.4_AppleSilicon.dmg',
       color: 'cyber-blue',
       available: true,
     },
@@ -37,7 +37,7 @@ export function Download({ t, language }: DownloadProps) {
       title: t.download.platform.macosIntel.title,
       version: t.download.platform.macosIntel.version,
       buttonText: t.download.platform.macosIntel.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.3/MaudelClaw_1.6.3_Intel.dmg',
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.4/MaudelClaw_1.6.4_Intel.dmg',
       color: 'cyber-purple',
       available: true,
     },
@@ -47,7 +47,7 @@ export function Download({ t, language }: DownloadProps) {
       title: t.download.platform.windows.title,
       version: t.download.platform.windows.version,
       buttonText: t.download.platform.windows.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.3/MaudelClaw_1.6.3_x64-setup.exe',
+      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.4/MaudelClaw_1.6.4_x64-setup.exe',
       color: 'cyber-pink',
       available: true,
     },
