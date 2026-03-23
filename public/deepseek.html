@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <title>MaudelClaw · 建设项目审计，您只需要一只"claw" | 科技未来版</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #00f3ff;
+            --secondary-color: #9d4edd;
+            --accent-color: #ff006e;
+            --dark-bg: #010214;
+            --card-bg: rgba(10, 20, 40, 0.7);
+            --grid-color: rgba(0, 243, 255, 0.15);
+            --glow-primary: 0 0 15px rgba(0, 243, 255, 0.8);
+            --glow-secondary: 0 0 15px rgba(157, 78, 221, 0.8);
+        }
+
+        body {
+            background: var(--dark-bg);
+            font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Microsoft YaHei', 'SF Pro Text', 'Helvetica Neue', sans-serif;
+            color: #eef5ff;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* 粒子背景 */
+        #particles-js {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+        }
+
+        /* 科技感网格背景 */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(var(--grid-color) 1px, transparent 1px),
+                linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+            background-size: 50px 50px;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.5;
+            animation: gridMove 20s linear infinite;
+        }
+
+        @keyframes gridMove {
+            0% { background-position: 0 0; }
+            100% { background-position: 50px 50px; }
+        }
+
+        /* 主容器 */
+        .wechat-article {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+            padding: 20px;
+        }
+
+        /* 3D卡片效果 */
+        .card-page {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform-style: preserve-3d;
+            transform: perspective(1000px);
+        }
+
+        /* 标题页特殊效果 */
+        .hero-page {
+            background: linear-gradient(145deg, #07152b 0%, #01050f 100%);
+            text-align: center;
+            padding: 60px 30px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+
+        .hero-page::after {
+            content: "";
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            background: linear-gradient(45deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+            border-radius: 22px;
+            z-index: -1;
+            animation: borderGlow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes borderGlow {
+            0% { filter: hue-rotate(0deg); opacity: 0.8; }
+            100% { filter: hue-rotate(360deg); opacity: 1; }
+        }
+
+        .brand-chip {
+            background: rgba(0, 243, 255, 0.15);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--primary-color);
+            border-radius: 50px;
+            padding: 12px 25px;
+            font-size: 14px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 30px;
+            color: #8dd0ff;
+            box-shadow: var(--glow-primary);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, #FFFFFF 0%, var(--primary-color) 50%, var(--secondary-color) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            margin-bottom: 20px;
+            text-shadow: 0 0 30px rgba(0, 243, 255, 0.5);
+            position: relative;
+            display: inline-block;
+        }
+
+        h1::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 4px;
+            background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+            border-radius: 2px;
+        }
+
+        .subhead {
+            font-size: 1.2rem;
+            color: #9bb8e0;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: rgba(0, 30, 60, 0.3);
+            border-radius: 15px;
+            display: inline-block;
+            border: 1px solid rgba(0, 200, 255, 0.3);
+            backdrop-filter: blur(5px);
+        }
+
+        h2 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 25px;
+            letter-spacing: -0.5px;
+            background: linear-gradient(120deg, #e0f0ff, var(--primary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        h2 i {
+            font-size: 2rem;
+            color: var(--primary-color);
+            text-shadow: var(--glow-primary);
+        }
+
+        /* 特色图标 */
+        .section-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            display: inline-block;
+            color: var(--primary-color);
+            text-shadow: var(--glow-primary);
+            animation: iconFloat 3s ease-in-out infinite;
+        }
+
+        @keyframes iconFloat {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        /* 特色卡片 */
+        .feature-card {
+            background: rgba(12, 25, 45, 0.8);
+            border-radius: 20px;
+            padding: 25px;
+            border: 1px solid rgba(0, 180, 255, 0.3);
+            backdrop-filter: blur(5px);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(180deg, var(--primary-color), var(--secondary-color));
+        }
+
+        .feature-card strong {
+            color: var(--primary-color);
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        /* 命令卡片 */
+        .cmd-card {
+            background: rgba(7, 18, 31, 0.9);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 15px 0;
+            border: 1px solid rgba(0, 170, 255, 0.4);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cmd-tag {
+            background: rgba(0, 170, 255, 0.2);
+            color: var(--primary-color);
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid var(--primary-color);
+            border-radius: 20px;
+            padding: 5px 15px;
+            display: inline-block;
+            margin-right: 15px;
+            box-shadow: var(--glow-primary);
+        }
+
+        /* 数字统计 */
+        .stat-number {
+            font-size: 3.5rem;
+            font-weight: 900;
+            color: var(--primary-color);
+            text-shadow: 0 0 20px var(--primary-color);
+            display: block;
+            line-height: 1;
+            margin-bottom: 10px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: numberPulse 2s ease-in-out infinite;
+        }
+
+        @keyframes numberPulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        /* 工具标签 */
+        .tool-item {
+            background: rgba(10, 22, 34, 0.8);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(44, 87, 124, 0.7);
+            display: inline-block;
+            margin: 5px;
+        }
+
+        /* 高亮区域 */
+        .highlight-glow {
+            background: linear-gradient(120deg, rgba(0, 200, 255, 0.2), rgba(0, 100, 255, 0.05));
+            border-left: 5px solid var(--primary-color);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(5px);
+        }
+
+        .highlight-glow::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent 30%, rgba(0, 243, 255, 0.1), transparent 70%);
+            z-index: -1;
+        }
+
+        /* 按钮 */
+        .btn-primary {
+            background: linear-gradient(95deg, var(--primary-color), var(--secondary-color));
+            border: none;
+            border-radius: 50px;
+            padding: 15px 35px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(0, 160, 255, 0.4);
+            font-size: 1.1rem;
+            letter-spacing: 1px;
+        }
+
+        /* 页脚 */
+        .footer-download {
+            background: rgba(0, 30, 60, 0.7);
+            border-radius: 20px;
+            padding: 40px;
+            text-align: center;
+            border: 1px solid rgba(0, 200, 255, 0.4);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .footer-download::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 30%, rgba(0, 243, 255, 0.1), transparent 70%);
+            z-index: -1;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .wechat-article {
+                padding: 10px;
+            }
+            
+            .card-page {
+                padding: 25px 20px;
+            }
+            
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            h2 {
+                font-size: 1.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        /* 进度指示器 */
+        .progress-indicator {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.5);
+            border-radius: 20px;
+            padding: 10px 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(0, 243, 255, 0.3);
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        /* 浮动元素 */
+        .floating-elements {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 1;
+        }
+
+        .float {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: floatAnimation 15s infinite linear;
+        }
+
+        @keyframes floatAnimation {
+            0% { transform: translate(0, 0) rotate(0deg); }
+            100% { transform: translate(100vw, 100vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 粒子背景 -->
+    <div id="particles-js"></div>
+    
+    <!-- 浮动元素 -->
+    <div class="floating-elements">
+        <div class="float" style="top: 20%; left: 10%; animation-delay: 0s; background: var(--primary-color);"></div>
+        <div class="float" style="top: 40%; left: 80%; animation-delay: 3s; background: var(--secondary-color);"></div>
+        <div class="float" style="top: 70%; left: 30%; animation-delay: 6s; background: var(--accent-color);"></div>
+        <div class="float" style="top: 10%; left: 60%; animation-delay: 9s; background: var(--primary-color);"></div>
+        <div class="float" style="top: 85%; left: 70%; animation-delay: 12s; background: var(--secondary-color);"></div>
+    </div>
+    
+    <!-- 进度指示器 -->
+    <div class="progress-indicator">
+        <i class="fas fa-rocket"></i> 科技未来版
+    </div>
+    
+    <div class="wechat-article">
+        <!-- 封面页 -->
+        <div class="card-page hero-page">
+            <div class="brand-chip"><i class="fas fa-bolt"></i> MaudelClaw · 国产垂直工程领域AI智能体</div>
+            <h1>建设项目审计<br>您只需要一只"claw"</h1>
+            <div class="subhead">连接需求与AI的智慧桥梁 · 让复杂任务回归简单</div>
+            <div style="margin-top: 30px; font-size: 14px; letter-spacing: 2px; color: rgba(255,255,255,0.7);">
+                <i class="fas fa-shield-alt"></i> 完全国产化 · <i class="fas fa-server"></i> 全本地化部署
+            </div>
+        </div>
+
+        <!-- 第一页：智慧桥梁 -->
+        <div class="card-page">
+            <h2><i class="fas fa-link"></i> 连接需求与AI的智慧桥梁</h2>
+            <p style="font-size: 1.2rem; margin-top: 15px;">MaudelClaw，国产垂直领域AI智能体，让专业工作摆脱繁琐配置，直达核心业务。</p>
+            <div class="feature-card">
+                <strong><i class="fas fa-brain"></i> 智能决策引擎</strong>
+                基于深度学习的业务逻辑分析，自动识别审计重点与风险点
+            </div>
+        </div>
+
+        <!-- 第二页：一句话生成智能体 -->
+        <div class="card-page">
+            <h2><i class="fas fa-magic"></i> 一句话，生成专属智能体</h2>
+            <p>接收你的指令，自动创建各类专业技能——</p>
+            <div style="margin: 25px 0; display: flex; flex-wrap: wrap; gap: 10px;">
+                <span class="tool-item"><i class="fas fa-file-contract"></i> 前期审批</span>
+                <span class="tool-item"><i class="fas fa-gavel"></i> 招投标审计</span>
+                <span class="tool-item"><i class="fas fa-handshake"></i> 合同审计</span>
+                <span class="tool-item"><i class="fas fa-boxes"></i> 物资审计</span>
+                <span class="tool-item"><i class="fas fa-exchange-alt"></i> 变更签证审计</span>
+                <span class="tool-item"><i class="fas fa-globe"></i> 覆盖全业务场景</span>
+            </div>
+        </div>
+
+        <!-- 第三页：专为工程咨询打造 -->
+        <div class="card-page">
+            <h2><i class="fas fa-hard-hat"></i> 专为工程咨询领域打造</h2>
+            <div style="margin-top: 20px;">
+                <div class="feature-card">
+                    <strong><i class="fas fa-flag"></i> 适配国产模型生态</strong>
+                    DeepSeek、阿里云百炼、智谱AI，支持Ollama本地大模型
+                </div>
+                <div class="feature-card">
+                    <strong><i class="fas fa-file-alt"></i> 全格式文档解析</strong>
+                    Word / Excel / PDF扫描件 + OCR智能识别
+                </div>
+                <div class="feature-card">
+                    <strong><i class="fas fa-tools"></i> 自主扩展能力</strong>
+                    自研工具、安装插件，智能提取关键信息
+                </div>
+                <div class="feature-card">
+                    <strong><i class="fas fa-database"></i> RAG库支撑</strong>
+                    海量数据向量化存储，超越上下文限制的记忆
+                </div>
+                <div class="feature-card">
+                    <strong><i class="fas fa-cogs"></i> 专业模型构建</strong>
+                    按需搭建审计/分析/风控专业模型
+                </div>
+            </div>
+        </div>
+
+        <!-- 第四页：指令梯度展示 -->
+        <div class="card-page">
+            <h2><i class="fas fa-microphone"></i> 从简单指令到专家系统</h2>
+            <p style="margin-bottom: 20px; font-size: 1.1rem;">示例：创建变更签证审计技能</p>
+            
+            <div class="cmd-card">
+                <span class="cmd-tag">懒人版</span>
+                "创建变更签证审计技能"
+            </div>
+            
+            <div class="cmd-card">
+                <span class="cmd-tag">初级版</span>
+                "你是一位资深工程项目专家，请基于丰富的工程项目管理经验，创建变更签证审计技能，审计范围包括……重点关注……"
+            </div>
+            
+            <div class="cmd-card">
+                <span class="cmd-tag">进阶版</span>
+                "你是一位建设项目管理专家，长期从事能源类项目全过程管理，精通投资管控，善于发现招标采购、合同签订、变更签证中的隐蔽问题。我将上传word、excel、PDF，你将基于这些文档开展审计工作。"
+            </div>
+            
+            <div class="cmd-card">
+                <span class="cmd-tag">专业版</span>
+                "请基于@审计作业指引库，结合@国家法律法规库 @公司制度库 @审计案例库 @造价指标库，创建变更签证审计技能，严禁发散其他领域。"
+            </div>
+        </div>
+
+        <!-- 第五页：SkillForge -->
+        <div class="card-page">
+            <h2><i class="fas fa-hammer"></i> SkillForge —— 对话即沉淀，经验可复用</h2>
+            <div class="highlight-glow">
+                <p><i class="fas fa-check"></i> 将多轮交互对话<strong style="color:var(--primary-color);"> 自动总结、抽取关键信息</strong></p>
+                <p><i class="fas fa-check"></i> 一键将对话成果<strong style="color:var(--primary-color);"> 创建为标准化技能</strong></p>
+                <p><i class="fas fa-check"></i> 越用越聪明，让深度对话成为<strong>团队核心资产</strong></p>
+            </div>
+        </div>
+
+        <!-- 第六页：AI Agent开发专业化 -->
+        <div class="card-page">
+            <h2><i class="fas fa-robot"></i> AI Agent开发 · 进入"专业自主"时代</h2>
+            <div style="background: radial-gradient(ellipse at 20% 30%, rgba(10, 31, 58, 0.9), rgba(2, 8, 18, 0.9)); 
+                        border-radius: 20px; padding: 30px; margin: 20px 0; border: 1px solid rgba(0, 204, 255, 0.4);
+                        position: relative; overflow: hidden;">
+                <p style="font-size: 1.3rem; font-weight: 700; margin-bottom: 15px; color: #fff;">
+                    <i class="fas fa-comments"></i> 专业人员通过对话直接开发AI Agent
+                </p>
+                <p style="margin-bottom: 20px; font-size: 1.1rem;">彻底摆脱对程序员的依赖</p>
+                
+                <div style="display: flex; flex-direction: column; gap: 15px;">
+                    <div><i class="fas fa-check" style="color: var(--primary-color);"></i> 
+                        <strong style="color:#6bc8ff;">技能更专业可控</strong> —— 业务逻辑由领域专家亲自定义，精准匹配实战场景
+                    </div>
+                    <div><i class="fas fa-check" style="color: var(--primary-color);"></i> 
+                        <strong style="color:#6bc8ff;">研发周期大幅缩短</strong> —— 从数周迭代到分钟级生成，需求直达智能体
+                    </div>
+                    <div><i class="fas fa-check" style="color: var(--primary-color);"></i> 
+                        <strong style="color:#6bc8ff;">消除沟通折损</strong> —— 专家意图无损传递，告别需求翻译偏差
+                    </div>
+                </div>
+            </div>
+            <p style="font-size: 0.95rem; margin-top: 15px; color: #8bb4e0;">
+                <i class="fas fa-bolt"></i> 无需编写一行代码，用业务语言驱动AI —— 让专业的人，直接定义专业的智能。
+            </p>
+        </div>
+
+        <!-- 第七页：技能管理 -->
+        <div class="card-page">
+            <h2><i class="fas fa-cube"></i> 技能管理 · 无限扩展</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">支持技能的<strong>搜索、安装与分享</strong>，接入 
+                <strong style="color:var(--primary-color);">skills.sh</strong> 与 
+                <strong style="color:var(--primary-color);">clawhub.com</strong> 技能库，海量技能一键调用。</p>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin: 20px 0;">
+                <span class="tool-item"><i class="fas fa-download"></i> 一键安装技能</span>
+                <span class="tool-item"><i class="fas fa-fire"></i> 社区热门排行</span>
+                <span class="tool-item"><i class="fas fa-code-branch"></i> 版本管理同步</span>
+            </div>
+        </div>
+
+        <!-- 第八页：海量模型支持 -->
+        <div class="card-page">
+            <h2><i class="fas fa-globe-americas"></i> 海量模型支持 · 本地云端全覆盖</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                DeepSeek · 阿里云百炼 · 火山方舟 · 硅基流动 · 智谱AI · 月之暗面 · OpenAI · Gemini · Grok ……
+            </p>
+            <div class="highlight-glow">
+                <i class="fas fa-shield-alt"></i> 支持 Ollama 本地模型接入，满足高安全与信创合规需求。
+            </div>
+        </div>
+
+        <!-- 第九页：工具矩阵 -->
+        <div class="card-page">
+            <h2><i class="fas fa-puzzle-piece"></i> 工具矩阵 · 超级能力</h2>
+            <div style="display: flex; gap: 40px; flex-wrap: wrap; margin: 30px 0; justify-content: center;">
+                <div style="text-align: center;">
+                    <div class="stat-number">80+</div>
+                    <div style="font-size: 1.1rem;">MCP工具</div>
+                </div>
+                <div style="text-align: center;">
+                    <div class="stat-number">50+</div>
+                    <div style="font-size: 1.1rem;">内置工具</div>
+                </div>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 10px; margin: 20px 0;">
+                <span class="tool-item"><i class="fas fa-folder"></i> 文件系统操作</span>
+                <span class="tool-item"><i class="fas fa-compass"></i> 浏览器自动化</span>
+                <span class="tool-item"><i class="fas fa-book"></i> 知识库管理</span>
+                <span class="tool-item"><i class="fas fa-envelope"></i> 邮件/图表生成</span>
+                <span class="tool-item"><i class="fas fa-cogs"></i> Skills管理</span>
+                <span class="tool-item"><i class="fas fa-search"></i> 搜索与网页</span>
+            </div>
+            <div class="feature-card">
+                <strong><i class="fas fa-graduation-cap"></i> 知识库系统能力</strong><br>
+                上传文档形成私域知识库，生成咨询方案、投标文件、创建专用技能。
+            </div>
+        </div>
+
+        <!-- 第十页：企业工作流 -->
+        <div class="card-page">
+            <h2><i class="fas fa-building"></i> 无缝融入企业工作流</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 20px;">
+                接入 <strong>钉钉 · 飞书 · 企业微信</strong>，在熟悉环境中调用 MaudelClaw 核心能力。
+            </p>
+            <div class="cmd-card">
+                <i class="fas fa-clock"></i> <strong>定时任务</strong><br>
+                支持创建定时任务技能，每日自动抓取新闻、更新网站、撰写工作日志。
+            </div>
+        </div>
+
+        <!-- 第十一页：全栈国产化安全 -->
+        <div class="card-page">
+            <h2><i class="fas fa-lock"></i> 全栈国产化 · 安全可控</h2>
+            <div class="highlight-glow">
+                <p><i class="fas fa-server"></i> MaudelClaw服务端 + RAG知识库 + OCR服务 <strong>全本地化部署</strong></p>
+                <p><i class="fas fa-shield-alt"></i> 数据不出域 · 满足信创及高安全合规要求</p>
+            </div>
+            <div style="display: flex; flex-wrap: wrap; gap: 15px; margin-top: 20px;">
+                <span class="tool-item"><i class="fas fa-database"></i> 数据不出域</span>
+                <span class="tool-item"><i class="fas fa-microchip"></i> 信创适配</span>
+                <span class="tool-item"><i class="fas fa-home"></i> 私有化优先</span>
+            </div>
+        </div>
+
+        <!-- 第十二页：全能数字助手 -->
+        <div class="card-page">
+            <h2><i class="fas fa-rocket"></i> 不止于审计 · 全能数字助手</h2>
+            <div style="margin-top: 25px;">
+                <div class="feature-card">
+                    <strong><i class="fas fa-search"></i> 自动抓取企业工商舆情、时政要闻</strong>
+                    实时监控，智能分析，风险预警
+                </div>
+                <div class="feature-card">
+                    <strong><i class="fas fa-code"></i> 编写Python脚本、自动化重复操作</strong>
+                    解放双手，专注核心业务
+                </div>
+                <div class="feature-card">
+                    <strong><i class="fas fa-envelope-open-text"></i> 智能管理邮箱、整理个人文件夹</strong>
+                    权限可控，智能归档
+                </div>
+            </div>
+        </div>
+
+        <!-- 第十三页：立即体验 -->
+        <div class="card-page" style="text-align: center;">
+            <h2><i class="fas fa-bolt"></i> 立即体验 MaudelClaw</h2>
+            <div class="footer-download">
+                <div style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; 
+                          background: linear-gradient(120deg, #fff, var(--primary-color), var(--secondary-color)); 
+                          -webkit-background-clip: text; background-clip: text; color: transparent;
+                          margin-bottom: 20px;">
+                    MaudelClaw.ai
+                </div>
+                <p style="margin: 20px 0; font-size: 1.2rem;">
+                    <strong>完全国产化</strong> · <strong>全量数据本地化</strong> · <strong>满足信创要求</strong>
+                </p>
+                <p style="margin-bottom: 30px; font-size: 1.1rem;">
+                    <i class="fas fa-desktop"></i> MacOS / Windows 原生一键安装
+                </p>
+                <a href="#" class="btn-primary">
+                    <i class="fas fa-download"></i> 立即下载体验
+                </a>
+                <div style="margin-top: 30px; display: inline-block; background: rgba(0, 170, 255, 0.2); 
+                          border-radius: 40px; padding: 12px 25px; border: 1px solid var(--primary-color); 
+                          font-weight: 600; font-size: 1rem;">
+                    <i class="fas fa-rocket"></i> 无需复杂环境配置，开箱即用
+                </div>
+            </div>
+            <hr style="margin: 40px 0; border: none; height: 1px; background: linear-gradient(90deg, transparent, var(--primary-color), transparent);">
+            <p style="text-align: center; font-size: 14px; opacity: 0.7; letter-spacing: 1px;">
+                <i class="fas fa-copyright"></i> MaudelClaw · 国产垂直工程领域AI智能体 | 数据主权，由你掌控
+            </p>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+        // 初始化粒子背景
+        particlesJS('particles-js', {
+            particles: {
+                number: { value: 80, density: { enable: true, value_area: 800 } },
+                color: { value: "#00f3ff" },
+                shape: { type: "circle" },
+                opacity: { value: 0.5, random: true },
+                size: { value: 3, random: true },
+                line_linked: {
+                    enable: true,
+                    distance: 150,
+                    color: "#00f3ff",
+                    opacity: 0.2,
+                    width: 1
+                },
+                move: {
+                    enable: true,
+                    speed: 2,
+                    direction: "none",
+                    random: true,
+                    straight: false,
+                    out_mode: "out",
+                    bounce: false
+                }
+            },
+            interactivity: {
+                detect_on: "canvas",
+                events: {
+                    onhover: { enable: true, mode: "repulse" },
+                    onclick: { enable: true, mode: "push" }
+                }
+            },
+            retina_detect: true
+        });
+
+        // 添加滚动进度指示器
+        window.addEventListener('scroll', function() {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrollPercent = (scrollTop / scrollHeight) * 100;
+            
+            const progressIndicator = document.querySelector('.progress-indicator');
+            if (progressIndicator) {
+                progressIndicator.innerHTML = `<i class="fas fa-rocket"></i> 浏览进度: ${Math.round(scrollPercent)}%`;
+            }
+        });
+
+        // 添加打字机效果到标题
+        const title = document.querySelector('h1');
+        if (title) {
+            const text = title.innerText;
+            title.innerText = '';
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    title.innerText += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 50);
+                }
+            }
+            // 延迟开始打字效果
+            setTimeout(typeWriter, 1000);
+        }
+    </script>
+</body>
+</html>
