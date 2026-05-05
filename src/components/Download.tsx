@@ -18,7 +18,10 @@ export function Download({ t, language }: DownloadProps) {
   }
 
   // GitHub Releases 页面
-  const githubReleasesUrl = 'https://github.com/ModelSmart/MaudelClaw/releases/tag/1.6.5'
+  const githubReleasesUrl = 'https://github.com/ModelSmart/MaudelClaw/releases/tag/1.6.7'
+
+  // OSS 下载基础地址（中文用户使用）
+  const ossBaseUrl = 'https://maudelclaw.oss-cn-beijing.aliyuncs.com'
 
   const platforms = [
     {
@@ -27,7 +30,9 @@ export function Download({ t, language }: DownloadProps) {
       title: t.download.platform.macosArm.title,
       version: t.download.platform.macosArm.version,
       buttonText: t.download.platform.macosArm.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.5/MaudelClaw_1.6.5_AppleSilicon.dmg',
+      downloadUrl: isChineseUser
+        ? `${ossBaseUrl}/MaudelClaw_1.6.7_AppleSilicon.dmg`
+        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.7/MaudelClaw_1.6.7_AppleSilicon.dmg',
       color: 'cyber-blue',
       available: true,
     },
@@ -37,7 +42,9 @@ export function Download({ t, language }: DownloadProps) {
       title: t.download.platform.macosIntel.title,
       version: t.download.platform.macosIntel.version,
       buttonText: t.download.platform.macosIntel.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.5/MaudelClaw_1.6.5_Intel.dmg',
+      downloadUrl: isChineseUser
+        ? `${ossBaseUrl}/MaudelClaw_1.6.7_Intel.dmg`
+        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.7/MaudelClaw_1.6.7_Intel.dmg',
       color: 'cyber-purple',
       available: true,
     },
@@ -47,7 +54,9 @@ export function Download({ t, language }: DownloadProps) {
       title: t.download.platform.windows.title,
       version: t.download.platform.windows.version,
       buttonText: t.download.platform.windows.download,
-      downloadUrl: 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.5/MaudelClaw_1.6.5_x64-setup.exe',
+      downloadUrl: isChineseUser
+        ? `${ossBaseUrl}/MaudelClaw_1.6.7_x64-setup.exe`
+        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.7/MaudelClaw_1.6.7_x64-setup.exe',
       color: 'cyber-pink',
       available: true,
     },
