@@ -31,8 +31,8 @@ export function Download({ t, language }: DownloadProps) {
       version: t.download.platform.macosArm.version,
       buttonText: t.download.platform.macosArm.download,
       downloadUrl: isChineseUser
-        ? `${ossBaseUrl}/versions/1.6.8/MaudelClaw_1.6.8_AppleSilicon.dmg`
-        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.8/MaudelClaw_1.6.8_AppleSilicon.dmg',
+        ? `${ossBaseUrl}/MaudelClaw-1.6.8-AppleSilicon.dmg`
+        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.8/MaudelClaw-1.6.8-AppleSilicon.dmg',
       color: 'cyber-blue',
       available: true,
     },
@@ -43,8 +43,8 @@ export function Download({ t, language }: DownloadProps) {
       version: t.download.platform.macosIntel.version,
       buttonText: t.download.platform.macosIntel.download,
       downloadUrl: isChineseUser
-        ? `${ossBaseUrl}/versions/1.6.8/MaudelClaw_1.6.8_Intel.dmg`
-        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.8/MaudelClaw_1.6.8_Intel.dmg',
+        ? `${ossBaseUrl}/MaudelClaw-1.6.8-Intel.dmg`
+        : 'https://github.com/ModelSmart/MaudelClaw/releases/download/1.6.8/MaudelClaw-1.6.8-Intel.dmg',
       color: 'cyber-purple',
       available: true,
     },
