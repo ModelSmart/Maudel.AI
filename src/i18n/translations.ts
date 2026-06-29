@@ -130,7 +130,7 @@ export const translations = {
       platform: {
         macosArm: {
           title: 'macOS (Apple Silicon)',
-          version: 'For M1/M2/M3/M4 chips • Requires macOS 10.15 or later',
+          version: 'For M1/M2/M3/M4/M5 chips • Requires macOS 10.15 or later',
           download: 'Download for Apple Silicon',
         },
         macosIntel: {
@@ -205,7 +205,7 @@ export const translations = {
       },
       install: {
         question: 'How to install OpenClaw Desktop?',
-        answer: 'You can install MaudelClaw (OpenClaw Desktop) by downloading the appropriate version for your platform: Apple Silicon Mac (M1/M2/M3/M4), Intel Mac, or Windows. The installation is straightforward and requires macOS 10.15+ or Windows 10+.',
+        answer: 'You can install MaudelClaw (OpenClaw Desktop) by downloading the appropriate version for your platform: Apple Silicon Mac (M1/M2/M3/M4/M5), Intel Mac, or Windows. The installation is straightforward and requires macOS 10.15+ or Windows 10+.',
       },
       free: {
         question: 'Is MaudelClaw free and open source?',
@@ -349,7 +349,7 @@ export const translations = {
       platform: {
         macosArm: {
           title: 'macOS (Apple Silicon)',
-          version: '适用于 M1/M2/M3/M4 芯片 • 需要 macOS 10.15 或更高版本',
+          version: '适用于 M1/M2/M3/M4/M5 芯片 • 需要 macOS 10.15 或更高版本',
           download: '下载 Apple Silicon 版本',
         },
         macosIntel: {
@@ -424,7 +424,7 @@ export const translations = {
       },
       install: {
         question: '如何安装 OpenClaw 桌面版？',
-        answer: '您可以通过下载适合您平台的版本来安装 MaudelClaw（OpenClaw 桌面版）：Apple Silicon Mac (M1/M2/M3/M4)、Intel Mac 或 Windows。安装非常简单，需要 macOS 10.15+ 或 Windows 10+。',
+        answer: '您可以通过下载适合您平台的版本来安装 MaudelClaw（OpenClaw 桌面版）：Apple Silicon Mac (M1/M2/M3/M4/M5)、Intel Mac 或 Windows。安装非常简单，需要 macOS 10.15+ 或 Windows 10+。',
       },
       free: {
         question: 'MaudelClaw 是免费开源的吗？',
@@ -507,7 +507,7 @@ export const translations = {
       title: '下載 MaudelClaw',
       subtitle: '選擇您的平台，幾分鐘即可開始使用',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: '適用於 M1/M2/M3/M4 芯片', download: '下載 Apple Silicon 版本' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: '適用於 M1/M2/M3/M4/M5 芯片', download: '下載 Apple Silicon 版本' },
         macosIntel: { title: 'macOS (Intel)', version: '適用於 Intel 芯片 Mac', download: '下載 Intel 版本' },
         windows: { title: 'Windows', version: '需要 Windows 10 或更高版本', download: '下載 Windows 版本' },
       },
@@ -581,7 +581,7 @@ export const translations = {
     download: {
       title: 'MaudelClawをダウンロード', subtitle: 'プラットフォームを選んで数分で開始',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'M1/M2/M3/M4チップ用', download: 'Apple Silicon版をダウンロード' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'M1/M2/M3/M4/M5チップ用', download: 'Apple Silicon版をダウンロード' },
         macosIntel: { title: 'macOS (Intel)', version: 'Intel Mac用', download: 'Intel版をダウンロード' },
         windows: { title: 'Windows', version: 'Windows 10以降が必要', download: 'Windows版をダウンロード' },
       },
@@ -654,7 +654,7 @@ export const translations = {
     download: {
       title: 'Télécharger MaudelClaw', subtitle: 'Choisissez votre plateforme et commencez en minutes',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'Pour puces M1/M2/M3/M4', download: 'Télécharger pour Apple Silicon' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'Pour puces M1/M2/M3/M4/M5', download: 'Télécharger pour Apple Silicon' },
         macosIntel: { title: 'macOS (Intel)', version: 'Pour Mac Intel', download: 'Télécharger pour Intel' },
         windows: { title: 'Windows', version: 'Nécessite Windows 10 ou supérieur', download: 'Télécharger pour Windows' },
       },
@@ -727,7 +727,7 @@ export const translations = {
     download: {
       title: 'MaudelClaw Herunterladen', subtitle: 'Wählen Sie Ihre Plattform und starten Sie in Minuten',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'Für M1/M2/M3/M4-Chips', download: 'Für Apple Silicon herunterladen' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'Für M1/M2/M3/M4/M5-Chips', download: 'Für Apple Silicon herunterladen' },
         macosIntel: { title: 'macOS (Intel)', version: 'Für Intel-Macs', download: 'Für Intel herunterladen' },
         windows: { title: 'Windows', version: 'Erfordert Windows 10 oder höher', download: 'Für Windows herunterladen' },
       },
@@ -800,7 +800,7 @@ export const translations = {
     download: {
       title: 'Descargar MaudelClaw', subtitle: 'Elige tu plataforma y comienza en minutos',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'Para chips M1/M2/M3/M4', download: 'Descargar para Apple Silicon' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'Para chips M1/M2/M3/M4/M5', download: 'Descargar para Apple Silicon' },
         macosIntel: { title: 'macOS (Intel)', version: 'Para Macs Intel', download: 'Descargar para Intel' },
         windows: { title: 'Windows', version: 'Requiere Windows 10 o superior', download: 'Descargar para Windows' },
       },
@@ -873,7 +873,7 @@ export const translations = {
     download: {
       title: 'Скачать MaudelClaw', subtitle: 'Выберите платформу и начните за минуты',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'Для чипов M1/M2/M3/M4', download: 'Скачать для Apple Silicon' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'Для чипов M1/M2/M3/M4/M5', download: 'Скачать для Apple Silicon' },
         macosIntel: { title: 'macOS (Intel)', version: 'Для Intel Mac', download: 'Скачать для Intel' },
         windows: { title: 'Windows', version: 'Требуется Windows 10 или выше', download: 'Скачать для Windows' },
       },
@@ -946,7 +946,7 @@ export const translations = {
     download: {
       title: 'Tải xuống MaudelClaw', subtitle: 'Chọn nền tảng và bắt đầu trong vài phút',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'Cho chip M1/M2/M3/M4', download: 'Tải cho Apple Silicon' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'Cho chip M1/M2/M3/M4/M5', download: 'Tải cho Apple Silicon' },
         macosIntel: { title: 'macOS (Intel)', version: 'Cho Mac Intel', download: 'Tải cho Intel' },
         windows: { title: 'Windows', version: 'Yêu cầu Windows 10 trở lên', download: 'Tải cho Windows' },
       },
@@ -1019,7 +1019,7 @@ export const translations = {
     download: {
       title: 'تحميل MaudelClaw', subtitle: 'اختر منصتك وابدأ في دقائق',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'لشرائح M1/M2/M3/M4', download: 'تحميل لـ Apple Silicon' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'لشرائح M1/M2/M3/M4/M5', download: 'تحميل لـ Apple Silicon' },
         macosIntel: { title: 'macOS (Intel)', version: 'لـ Intel Mac', download: 'تحميل لـ Intel' },
         windows: { title: 'Windows', version: 'يتطلب Windows 10 أو أحدث', download: 'تحميل لـ Windows' },
       },
@@ -1092,7 +1092,7 @@ export const translations = {
     download: {
       title: 'ดาวน์โหลด MaudelClaw', subtitle: 'เลือกแพลตฟอร์มและเริ่มใช้ในไม่กี่นาที',
       platform: {
-        macosArm: { title: 'macOS (Apple Silicon)', version: 'สำหรับชิป M1/M2/M3/M4', download: 'ดาวน์โหลดสำหรับ Apple Silicon' },
+        macosArm: { title: 'macOS (Apple Silicon)', version: 'สำหรับชิป M1/M2/M3/M4/M5', download: 'ดาวน์โหลดสำหรับ Apple Silicon' },
         macosIntel: { title: 'macOS (Intel)', version: 'สำหรับ Intel Mac', download: 'ดาวน์โหลดสำหรับ Intel' },
         windows: { title: 'Windows', version: 'ต้องใช้ Windows 10 ขึ้นไป', download: 'ดาวน์โหลดสำหรับ Windows' },
       },
